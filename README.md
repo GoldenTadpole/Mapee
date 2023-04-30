@@ -1,6 +1,7 @@
 # Mapee
 
-A simple, yet powerful Minecraft mapper & filter.
+A simple, yet powerful Minecraft mapper & filter.<br>
+Website: [mapee.net](https://www.mapee.net/home)
 
 [Newest release](https://github.com/GoldenTadpole/Mapee/releases/tag/1.0.0)
 
