@@ -1,0 +1,8 @@
+{
+    "Name": "Caves",
+    "Id": "caves",
+    "OrderedIndex": 10,
+    "AllowedDimensions": "dimension != minecraft:the_end",
+    "AutomaticallyDisableNight": true,
+    "DisableDatapackStyle": false
+}

@@ -1,0 +1,19 @@
+[
+    ["minecraft:oak_leaves", {"MaxDepth": 3, "DecraseTransparencyMul": 3, "Id": "leaves"}],
+    ["minecraft:spruce_leaves", {"MaxDepth": 3, "DecraseTransparencyMul": 3, "Id": "leaves"}],
+    ["minecraft:birch_leaves", {"MaxDepth": 3, "DecraseTransparencyMul": 3, "Id": "leaves"}],
+    ["minecraft:jungle_leaves", {"MaxDepth": 3, "DecraseTransparencyMul": 3, "Id": "leaves"}],
+    ["minecraft:acacia_leaves", {"MaxDepth": 3, "DecraseTransparencyMul": 3, "Id": "leaves"}],
+    ["minecraft:dark_oak_leaves", {"MaxDepth": 3, "DecraseTransparencyMul": 3, "Id": "leaves"}],
+    ["minecraft:mangrove_leaves", {"MaxDepth": 3, "DecraseTransparencyMul": 3, "Id": "leaves"}],
+    ["minecraft:azalea_leaves", {"MaxDepth": 3, "DecraseTransparencyMul": 3, "Id": "leaves"}],
+    ["minecraft:flowering_azalea_leaves", {"MaxDepth": 3, "DecraseTransparencyMul": 3, "Id": "leaves"}],
+
+    ["minecraft:water", {"MaxDepth": 2.5, "OpacityMul": 1, "Id": "water"}],
+    ["minecraft:bubble_column", {"MaxDepth": 2.5, "OpacityMul": 1, "Id": "water"}],
+
+    ["minecraft:kelp", {"MaxDepth": 2.5, "OpacityMul": 1, "Id": "water"}],
+    ["minecraft:kelp_plant", {"MaxDepth": 2.5, "OpacityMul": 1, "Id": "water"}],
+    ["minecraft:seagrass", {"MaxDepth": 2.5, "OpacityMul": 1, "Id": "water"}],
+    ["minecraft:tall_seagrass", {"MaxDepth": 2.5, "OpacityMul": 1, "Id": "water"}]
+]

@@ -1,0 +1,24 @@
+{
+    "BlockGrouping": {
+        "Source": "BlockGrouping",
+        "DefaultOutput": "Disabled"
+    },
+    "BlockColor": {
+        "Source": "*UseDefault"
+    },
+    "BiomeColor": {
+        "Source": "*UseDefault"
+    },
+    "Elevation": {
+        "Source": "*UseDefault"
+    },
+    "DepthOpacity": {
+        "Source": "*UseDefault"
+    },
+    "Step": {
+        "Source": "*UseDefault"
+    },
+    "StepSettings": {
+        "Source": "*UseDefault"
+    }
+}

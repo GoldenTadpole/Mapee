@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="Mapper.Gui.StylebarControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Mapper.Gui"
+             mc:Ignorable="d" 
+             BorderBrush="#FF3F3F3F" BorderThickness="1"
+             Width="Auto" Height="Auto">
+
+    <UserControl.Effect>
+        <DropShadowEffect Direction="-75" ShadowDepth="2" Opacity="5" BlurRadius="6" Color="Black"/>
+    </UserControl.Effect>
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Template/ToolTip.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Height="Auto" Background="#FF1C1C1C">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="7" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Border BorderBrush="#FF3F3F3F" BorderThickness="0, 0, 0, 1" VerticalAlignment="Top" Grid.Row="0" Height="25">
+            <StackPanel Background="#FF282828">
+                <Label Content="Styles" FontSize="14" Padding="0" Margin="0, 2, 0, 0" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFEEEEEE" Grid.Row="0" />
+            </StackPanel>
+        </Border>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Grid x:Name="MainStyleGrid" Width="Auto" Height="Auto" Margin="6, 0, 6, 0" HorizontalAlignment="Center" Grid.Column="0" />
+            <Grid x:Name="StyleGrid" Width="Auto" Grid.Column="1" />
+        </Grid>
+
+        <Border x:Name="MoreButtonBorder" Width="68" Height="19" Margin="7, 2, 0, 7" BorderThickness="1" BorderBrush="#FF3F3F3F" HorizontalAlignment="Left" Grid.Row="3">
+            <Button x:Name="MoreButton" Foreground="#FFDDDDDD" Content="More" Width="68" Height="17" HorizontalAlignment="Left" Cursor="Hand" Click="MoreButton_Click">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#FF303030"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                        <Setter Property="BorderBrush" Value="#FF404040"/>
+                        <Setter Property="ToolTipService.InitialShowDelay" Value="200"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF404040"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#FF505050"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </Border>
+    </Grid>
+</UserControl>

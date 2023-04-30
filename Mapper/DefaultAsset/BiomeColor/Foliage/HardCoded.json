@@ -1,0 +1,30 @@
+{
+    "Header": {
+        "PayloadName": "Color",
+        "Extra": {"Type": "HardCoded"}
+    },
+
+    "Blocks": [
+        "minecraft:oak_leaves",
+        "minecraft:jungle_leaves",
+        "minecraft:acacia_leaves",
+        "minecraft:dark_oak_leaves",
+        "minecraft:mangrove_leaves",
+        "minecraft:vine"
+    ],
+
+    "Biomes": [
+        ["minecraft:swamp", "#6A7039"],
+        ["minecraft:mangrove_swamp", "#8DB127"],
+        ["minecraft:cherry_grove", "#B6DB61"],
+
+        {
+            "Biomes": [
+                "minecraft:badlands",
+                "minecraft:wooded_badlands",
+                "minecraft:eroded_badlands"
+            ],
+            "Color": "#90814D"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+[
+  [["minecraft:blue_dead_coral", []], ["minecraft:air", []]], 
+  [["minecraft:pink_dead_coral", []], ["minecraft:air", []]], 
+  [["minecraft:purple_dead_coral", []], ["minecraft:air", []]], 
+  [["minecraft:red_dead_coral", []], ["minecraft:air", []]], 
+  [["minecraft:yellow_dead_coral", []], ["minecraft:air", []]], 
+  [["minecraft:pink_coral", []], ["minecraft:brain_coral_block", []]], 
+  [["minecraft:purple_coral", []], ["minecraft:bubble_coral_block", []]], 
+  [["minecraft:red_coral", []], ["minecraft:fire_coral_block", []]], 
+  [["minecraft:blue_coral", []], ["minecraft:tube_coral_block", []]]
+]

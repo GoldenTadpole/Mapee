@@ -1,0 +1,17 @@
+{
+    "Default": {
+        "Type": "SetY",
+        "SetY": -58,
+        "Heightmap": "WORLD_SURFACE"
+    },
+    "Dimensions": [
+        {
+            "Dimension": "minecraft:nether",
+            "Settings": {
+                "Type": "SetY",
+                "SetY": 80,
+                "Heightmap": "WORLD_SURFACE"
+            }
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+﻿[
+  {"DefaultPayload": "StopAtEncounter"},
+
+  "minecraft:cobblestone",
+  "minecraft:mossy_cobblestone",
+  "minecraft:oak_planks",
+  "minecraft:moss_block",
+  "minecraft:moss_carpet"
+]

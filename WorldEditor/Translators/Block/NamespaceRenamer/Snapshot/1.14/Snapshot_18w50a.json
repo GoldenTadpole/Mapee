@@ -1,0 +1,8 @@
+[
+  [["minecraft:bell", [["face", "floor"], ["facing", "north"]]], ["minecraft:bell", [["attachment", "floor"], ["facing", "north"]]]], 
+  [["minecraft:bell", [["face", "floor"], ["facing", "south"]]], ["minecraft:bell", [["attachment", "floor"], ["facing", "south"]]]], 
+  [["minecraft:bell", [["face", "floor"], ["facing", "west"]]], ["minecraft:bell", [["attachment", "floor"], ["facing", "west"]]]],
+  [["minecraft:bell", [["face", "floor"], ["facing", "east"]]], ["minecraft:bell", [["attachment", "floor"], ["facing", "east"]]]], 
+  [["minecraft:bell", [["face", "wall"], ["facing", "north"]]], ["minecraft:bell", [["attachment", "floor"], ["facing", "north"]]]], 
+  [["minecraft:bell", [["face", "wall"], ["facing", "south"]]], ["minecraft:bell", [["attachment", "floor"], ["facing", "south"]]]]
+]

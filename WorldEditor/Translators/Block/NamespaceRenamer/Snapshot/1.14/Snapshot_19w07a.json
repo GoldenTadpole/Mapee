@@ -1,0 +1,13 @@
+[
+  [["minecraft:barrel", [["facing", "north"]]], ["minecraft:barrel", [["facing", "north"], ["open", "false"]]]], 
+  [["minecraft:barrel", [["facing", "east"]]], ["minecraft:barrel", [["facing", "east"], ["open", "false"]]]], 
+  [["minecraft:barrel", [["facing", "south"]]], ["minecraft:barrel", [["facing", "south"], ["open", "false"]]]], 
+  [["minecraft:barrel", [["facing", "west"]]], ["minecraft:barrel", [["facing", "west"], ["open", "false"]]]], 
+  [["minecraft:barrel", [["facing", "up"]]], ["minecraft:barrel", [["facing", "up"], ["open", "false"]]]], 
+  [["minecraft:barrel", [["facing", "down"]]], ["minecraft:barrel", [["facing", "down"], ["open", "false"]]]], 
+  [["minecraft:lectern", [["facing", "north"]]], ["minecraft:lectern", [["facing", "north"], ["has_book", "false"], ["powered", "false"]]]], 
+  [["minecraft:lectern", [["facing", "south"]]], ["minecraft:lectern", [["facing", "south"], ["has_book", "false"], ["powered", "false"]]]], 
+  [["minecraft:lectern", [["facing", "west"]]], ["minecraft:lectern", [["facing", "west"], ["has_book", "false"], ["powered", "false"]]]], 
+  [["minecraft:lectern", [["facing", "east"]]], ["minecraft:lectern", [["facing", "east"], ["has_book", "false"], ["powered", "false"]]]], 
+  [["minecraft:stonecutter", []], ["minecraft:stonecutter", [["facing", "north"]]]]
+]

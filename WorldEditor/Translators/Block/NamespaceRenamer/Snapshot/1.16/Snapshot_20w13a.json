@@ -1,0 +1,8 @@
+[
+  [["minecraft:jigsaw", [["facing", "north"]]], ["minecraft:jigsaw", [["orientation", "north_up"]]]], 
+  [["minecraft:jigsaw", [["facing", "east"]]], ["minecraft:jigsaw", [["orientation", "east_up"]]]], 
+  [["minecraft:jigsaw", [["facing", "south"]]], ["minecraft:jigsaw", [["orientation", "south_up"]]]], 
+  [["minecraft:jigsaw", [["facing", "west"]]], ["minecraft:jigsaw", [["orientation", "west_up"]]]], 
+  [["minecraft:jigsaw", [["facing", "up"]]], ["minecraft:jigsaw", [["orientation", "up_north"]]]], 
+  [["minecraft:jigsaw", [["facing", "down"]]], ["minecraft:jigsaw", [["orientation", "down_south"]]]]
+]

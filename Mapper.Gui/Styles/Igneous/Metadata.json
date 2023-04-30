@@ -1,0 +1,8 @@
+{
+    "Name": "Igneous",
+    "Id": "igneous",
+    "OrderedIndex": 7,
+    "AllowedDimensions": "dimension == minecraft:overworld",
+    "AutomaticallyDisableNight": true,
+    "DisableDatapackStyle": false
+}

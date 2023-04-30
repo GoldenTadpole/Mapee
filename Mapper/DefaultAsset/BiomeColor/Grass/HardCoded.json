@@ -1,0 +1,31 @@
+{
+    "Header": {
+        "PayloadName": "Color",
+        "Extra": {"Type": "HardCoded"}
+    },
+
+    "Blocks": [
+        "minecraft:grass_block",
+        "minecraft:grass",
+        "minecraft:tall_grass",
+        "minecraft:fern",
+        "minecraft:large_fern",
+        "minecraft:potted_fern",
+        "minecraft:sugar_cane"
+    ],
+
+    "Biomes": [
+        ["minecraft:swamp", "#667039"],
+        ["minecraft:mangrove_swamp", "#6A7039"],
+        ["minecraft:cherry_grove", "#B6DB61"],
+
+        {
+            "Biomes": [
+                "minecraft:badlands",
+                "minecraft:wooded_badlands",
+                "minecraft:eroded_badlands"
+            ],
+            "Color": "#90814D"
+        }
+    ]
+}

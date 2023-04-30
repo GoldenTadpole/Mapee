@@ -1,0 +1,17 @@
+[
+    ["minecraft:sand", {"Max": 6}],
+    ["minecraft:sandstone", {"Max": 6}],
+    ["minecraft:sandstone_slab", {"Max": 6}],
+    ["minecraft:sandstone_stairs", {"Max": 6}],
+    ["minecraft:cut_sandstone", {"Max": 6}],
+    ["minecraft:cut_sandstone_slab", {"Max": 6}],
+    ["minecraft:smooth_sandstone", {"Max": 6}],
+    ["minecraft:smooth_sandstone_slab", {"Max": 6}],
+    ["minecraft:smooth_sandstone_stairs", {"Max": 6}],
+    ["minecraft:chiseled_sandstone", {"Max": 6}],
+
+    ["minecraft:ice", {"Max": 10}],
+    ["minecraft:packed_ice", {"Max": 10}],
+    ["minecraft:blue_ice", {"Max": 10}],
+    ["minecraft:end_stone", {"Max": 10, "MaxIncr": 0.06, "MinIncr": 0.025}]
+]

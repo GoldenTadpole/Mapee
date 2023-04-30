@@ -1,0 +1,27 @@
+{
+    "Default": {
+        "SkyLight": 1,
+        "AmbientLight": 1,
+        "AltitudeYOffset": 30,
+        "TransparentBlockStepIntensity": 2,
+        "Background": {
+            "IsChecker": true,
+            "ColorPair": [[10, 10, 10], [15, 15, 15]]
+        }
+    },
+    "Dimensions": [
+        {
+            "Dimension": "minecraft:nether",
+            "Settings": {
+                "SkyLight": 0,
+                "AmbientLight": 0.6,
+                "AltitudeYOffset": 10,
+                "TransparentBlockStepIntensity": 2,
+                "Background": {
+                    "IsChecker": true,
+                    "ColorPair": [[12, 1, 2], [20, 2, 3]]
+                }
+            }
+        }
+    ]
+}

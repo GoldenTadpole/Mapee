@@ -1,0 +1,9 @@
+[
+    {"DefaultPayload": "Disabled"},
+
+    "minecraft:air",
+    "minecraft:cave_air",
+    "minecraft:void_air",
+    "minecraft:light",
+    "minecraft:barrier"
+]

@@ -1,0 +1,8 @@
+{
+    "Name": "Heightmap",
+    "Id": "heightmap",
+    "OrderedIndex": 2,
+    "AllowedDimensions": "dimension != *",
+    "AutomaticallyDisableNight": true,
+    "DisableDatapackStyle": true
+}

@@ -1,0 +1,8 @@
+{
+    "Name": "Beta",
+    "Id": "beta",
+    "OrderedIndex": 6,
+    "AllowedDimensions": "dimension != *",
+    "AutomaticallyDisableNight": false,
+    "DisableDatapackStyle": true
+}

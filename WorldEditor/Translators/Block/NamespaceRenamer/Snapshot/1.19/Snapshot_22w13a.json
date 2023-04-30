@@ -1,0 +1,6 @@
+[
+  [["minecraft:sculk_shrieker", [["shrieking", "true"], ["waterlogged", "true"]]], ["minecraft:sculk_shrieker", [["can_summon", "false"], ["shrieking", "true"], ["waterlogged", "true"]]]], 
+  [["minecraft:sculk_shrieker", [["shrieking", "true"], ["waterlogged", "false"]]], ["minecraft:sculk_shrieker", [["can_summon", "false"], ["shrieking", "true"], ["waterlogged", "false"]]]], 
+  [["minecraft:sculk_shrieker", [["shrieking", "false"], ["waterlogged", "true"]]], ["minecraft:sculk_shrieker", [["can_summon", "false"], ["shrieking", "false"], ["waterlogged", "true"]]]], 
+  [["minecraft:sculk_shrieker", [["shrieking", "false"], ["waterlogged", "false"]]], ["minecraft:sculk_shrieker", [["can_summon", "false"], ["shrieking", "false"], ["waterlogged", "false"]]]]
+]

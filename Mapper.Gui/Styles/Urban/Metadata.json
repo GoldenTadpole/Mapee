@@ -1,0 +1,8 @@
+{
+    "Name": "Urban",
+    "Id": "urban",
+    "OrderedIndex": 1,
+    "AllowedDimensions": "dimension != *",
+    "AutomaticallyDisableNight": false,
+    "DisableDatapackStyle": true
+}

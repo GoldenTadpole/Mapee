@@ -1,0 +1,199 @@
+﻿[
+    {"DefaultPayload": "Ignore"},
+
+    "minecraft:air",
+    "minecraft:cave_air",
+    "minecraft:void_air",
+    "minecraft:light",
+    "minecraft:barrier",
+
+    "minecraft:torch",
+    "minecraft:soul_torch",
+    "minecraft:redstone_torch",
+    "minecraft:lantern",
+    "minecraft:soul_lantern",
+
+    "minecraft:big_dripleaf",
+    "minecraft:big_dripleaf_stem",
+    "minecraft:small_dripleaf",
+
+    "minecraft:candle",
+    "minecraft:white_candle",
+    "minecraft:orange_candle",
+    "minecraft:magenta_candle",
+    "minecraft:light_blue_candle",
+    "minecraft:yellow_candle",
+    "minecraft:lime_candle",
+    "minecraft:pink_candle",
+    "minecraft:gray_candle",
+    "minecraft:light_gray_candle",
+    "minecraft:cyan_candle",
+    "minecraft:purple_candle",
+    "minecraft:blue_candle",
+    "minecraft:brown_candle",
+    "minecraft:green_candle",
+    "minecraft:red_candle",
+    "minecraft:black_candle",
+
+    "minecraft:bubble_column",
+
+    "minecraft:cocoa",
+
+    "minecraft:lily_pad",
+
+    "minecraft:sweet_berry_bush",
+
+    "minecraft:cave_vines",
+    "minecraft:cave_vines_plant",
+
+    "minecraft:tube_coral",
+    "minecraft:brain_coral",
+    "minecraft:bubble_coral",
+    "minecraft:fire_coral",
+    "minecraft:horn_coral",
+    "minecraft:dead_tube_coral",
+    "minecraft:dead_brain_coral",
+    "minecraft:dead_bubble_coral",
+    "minecraft:dead_fire_coral",
+    "minecraft:dead_horn_coral",
+
+    "minecraft:tube_coral_fan",
+    "minecraft:brain_coral_fan",
+    "minecraft:bubble_coral_fan",
+    "minecraft:fire_coral_fan",
+    "minecraft:horn_coral_fan",
+    "minecraft:dead_tube_coral_fan",
+    "minecraft:dead_brain_coral_fan",
+    "minecraft:dead_bubble_coral_fan",
+    "minecraft:dead_fire_coral_fan",
+    "minecraft:dead_horn_coral_fan",
+    "minecraft:tube_coral_wall_fan",
+    "minecraft:brain_coral_wall_fan",
+    "minecraft:bubble_coral_wall_fan",
+    "minecraft:fire_coral_wall_fan",
+    "minecraft:horn_coral_wall_fan",
+    "minecraft:dead_tube_coral_wall_fan",
+    "minecraft:dead_brain_coral_wall_fan",
+    "minecraft:dead_bubble_coral_wall_fan",
+    "minecraft:dead_fire_coral_wall_fan",
+    "minecraft:dead_horn_coral_wall_fan",
+
+    "minecraft:wheat",
+    "minecraft:beetroots",
+    "minecraft:carrots",
+    "minecraft:potatoes",
+
+    "minecraft:dead_bush",
+
+    "minecraft:grass",
+    "minecraft:fern",
+    "minecraft:tall_grass",
+    "minecraft:large_fern",
+
+    "minecraft:fire",
+    "minecraft:soul_fire",
+
+    "minecraft:dandelion",
+    "minecraft:poppy",
+    "minecraft:blue_orchid",
+    "minecraft:allium",
+    "minecraft:azure_bluet",
+    "minecraft:red_tulip",
+    "minecraft:orange_tulip",
+    "minecraft:white_tulip",
+    "minecraft:pink_tulip",
+    "minecraft:oxeye_daisy",
+    "minecraft:cornflower",
+    "minecraft:lily_of_the_valley",
+    "minecraft:wither_rose",
+    "minecraft:sunflower",
+    "minecraft:lilac",
+    "minecraft:rose_bush",
+    "minecraft:peony",
+
+    "minecraft:crimson_fungus",
+    "minecraft:warped_fungus",
+
+    "minecraft:glow_lichen",
+
+    "minecraft:hanging_roots",
+
+    "minecraft:kelp",
+    "minecraft:kelp_plant",
+
+    "minecraft:brown_mushroom",
+    "minecraft:red_mushroom",
+
+    "minecraft:nether_sprouts",
+
+    "minecraft:nether_wart",
+
+    "minecraft:crimson_roots",
+    "minecraft:warped_roots",
+
+    "minecraft:oak_sapling",
+    "minecraft:spruce_sapling",
+    "minecraft:birch_sapling",
+    "minecraft:jungle_sapling",
+    "minecraft:acacia_sapling",
+    "minecraft:dark_oak_sapling",
+    "minecraft:mangrove_propagule",
+    "minecraft:cherry_sapling",
+
+    "minecraft:seagrass",
+    "minecraft:tall_seagrass",
+
+    "minecraft:torch",
+    "minecraft:soul_torch",
+    "minecraft:wall_torch",
+    "minecraft:soul_wall_torch",
+
+    "minecraft:spore_blossom",
+
+    "minecraft:pumpkin_stem",
+    "minecraft:attached_pumpkin_stem",
+
+    "minecraft:sugar_cane",
+
+    "minecraft:twisting_vines",
+    "minecraft:twisting_vines_plant",
+
+    "minecraft:vine",
+
+    "minecraft:weeping_vines",
+    "minecraft:weeping_vines_plant",
+
+    "minecraft:stone_button",
+    "minecraft:oak_button",
+    "minecraft:spruce_button",
+    "minecraft:birch_button",
+    "minecraft:jungle_button",
+    "minecraft:acacia_button",
+    "minecraft:dark_oak_button",
+    "minecraft:mangrove_button",
+    "minecraft:cherry_button",
+    "minecraft:crimson_button",
+    "minecraft:warped_button",
+    "minecraft:polished_blackstone_button",
+
+    "minecraft:lever",
+
+    "minecraft:redstone_wire",
+
+    "minecraft:redstone_torch",
+    "minecraft:redstone_wall_torch",
+
+    "minecraft:tripwire",
+
+    "minecraft:tripwire_hook",
+
+    "minecraft:water",
+
+
+    "minecraft:pink_petals",
+    "minecraft:pitcher_crop",
+    "minecraft:pitcher_plant",
+    "minecraft:sniffer_egg",
+    "minecraft:torchflower",
+    "minecraft:torchflower_crop"
+]

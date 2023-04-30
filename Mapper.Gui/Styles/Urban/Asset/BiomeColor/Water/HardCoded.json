@@ -1,0 +1,32 @@
+{
+    "Header": {
+        "PayloadName": "Color",
+        "Extra": {"Type": "HardCoded"}
+    },
+    
+    "Blocks": [
+        "minecraft:water",
+        "minecraft:water_cauldron",
+        "minecraft:bubble_column",
+        "minecraft:kelp",
+        "minecraft:kelp_plant",
+        "minecraft:seagrass",
+        "minecraft:tall_seagrass"
+    ],
+
+    "Biomes": [
+        ["minecraft:plains", "#2B4D5A"],
+
+        ["minecraft:frozen_ocean", "#225263"],
+        ["minecraft:deep_frozen_ocean", "#225263"],
+        ["minecraft:cold_ocean", "#294A56"],
+        ["minecraft:deep_cold_ocean", "#294A56"],
+        ["minecraft:lukewarm_ocean", "#2D515E"],
+        ["minecraft:deep_lukewarm_ocean", "#2D515E"],
+        ["minecraft:warm_ocean", "#2D535F"],
+        ["minecraft:deep_warm_ocean", "#2D535F"],
+
+        ["minecraft:swamp", "#2A4C2B"],
+        ["minecraft:mangrove_swamp", "#3E4C2B"]
+    ]
+}

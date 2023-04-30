@@ -1,0 +1,161 @@
+{
+    "Header": {
+        "PayloadName": "Color",
+        "Extra": {"Type": "HardCoded"}
+    },
+    
+    "Blocks": [
+        "minecraft:water",
+        "minecraft:water_cauldron",
+        "minecraft:bubble_column",
+        "minecraft:kelp",
+        "minecraft:kelp_plant",
+        "minecraft:seagrass",
+        "minecraft:tall_seagrass"
+    ],
+
+    "Biomes": [
+        {
+            "Biomes": [
+                "minecraft:snowy_plains",
+                "minecraft:ice_spikes"
+            ],
+            "Color": "#3F76E4"
+        },
+        {
+            "Biomes": [
+                "minecraft:snowy_taiga",
+                "minecraft:snowy_beach"
+            ],
+            "Color": "#3D57D6"
+        },
+        {
+            "Biomes": [
+                "minecraft:grove",
+                "minecraft:snowy_slopes",
+                "minecraft:jagged_peaks",
+                "minecraft:frozen_peaks"
+            ],
+            "Color": "#3F76E4"
+        },
+
+        {
+            "Biomes": [
+                "minecraft:windswept_hills",
+                "minecraft:windswept_gravelly_hills",
+                "minecraft:windswept_forest",
+                "minecraft:taiga",
+                "minecraft:old_growth_pine_taiga",
+                "minecraft:old_growth_spruce_taiga",
+                "minecraft:stony_shore"
+            ],
+            "Color": "#3F76E4"
+        },
+
+        {
+            "Biomes": [
+                "minecraft:plains",
+                "minecraft:sunflower_plains",
+                "minecraft:forest",
+                "minecraft:flower_forest",
+                "minecraft:birch_forest",
+                "minecraft:old_growth_birch_forest",
+                "minecraft:dark_forest"
+            ],
+            "Color": "#3F76E4"
+        },
+        ["minecraft:swamp", "#617B64"],
+        ["minecraft:mangrove_swamp", "#3A7A6A"],
+        ["minecraft:cherry_grove", "#5DB7EF"],
+        {
+            "Biomes": [
+                "minecraft:jungle",
+                "minecraft:sparse_jungle",
+                "minecraft:bamboo_jungle",
+                "minecraft:beach",
+                "minecraft:mushroom_fields"
+            ],
+            "Color": "#3F76E4"
+        },
+        ["minecraft:meadow", "#0E4ECF"],
+        ["minecraft:stony_peaks", "#3F76E4"],
+
+        {
+            "Biomes": [
+                "minecraft:desert",
+                "minecraft:savanna",
+                "minecraft:savanna_plateau",
+                "minecraft:windswept_savanna",
+                "minecraft:badlands",
+                "minecraft:wooded_badlands",
+                "minecraft:eroded_badlands"
+            ],
+            "Color": "#3F76E4"
+        },
+
+        ["minecraft:river", "#3F76E4"],
+        ["minecraft:frozen_river", "#3938C9"],
+        ["minecraft:warm_ocean", "#42AAEF"],
+        {
+            "Biomes": [
+                "minecraft:lukewarm_ocean",
+                "minecraft:deep_lukewarm_ocean"
+            ],
+            "Color": "#428CEB"
+        },
+        {
+            "Biomes": [
+                "minecraft:ocean",
+                "minecraft:deep_ocean"
+            ],
+            "Color": "#3F76E4"
+        },
+        {
+            "Biomes": [
+                "minecraft:cold_ocean",
+                "minecraft:deep_cold_ocean"
+            ],
+            "Color": "#3D57D6"
+        },
+        {
+            "Biomes": [
+                "minecraft:frozen_ocean",
+                "minecraft:deep_frozen_ocean"
+            ],
+            "Color": "#3938C9"
+        },
+
+        {
+            "Biomes": [
+                "minecraft:deep_dark",
+                "minecraft:dripstone_caves",
+                "minecraft:lush_caves"
+            ],
+            "Color": "#3F76E4"
+        },
+
+        ["minecraft:the_void", "#3F76E4"],
+
+        {
+            "Biomes": [
+                "minecraft:nether_wastes",
+                "minecraft:soul_sand_valley",
+                "minecraft:crimson_forest",
+                "minecraft:warped_forest",
+                "minecraft:basalt_deltas"
+            ],
+            "Color": "#3F76E4"
+        },
+
+        {
+            "Biomes": [
+                "minecraft:the_end",
+                "minecraft:small_end_islands",
+                "minecraft:end_midlands",
+                "minecraft:end_highlands",
+                "minecraft:end_barrens"
+            ],
+            "Color": "#3F76E4"
+        }
+    ]
+}

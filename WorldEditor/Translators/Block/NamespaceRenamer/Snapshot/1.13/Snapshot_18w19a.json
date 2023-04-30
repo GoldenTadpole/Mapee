@@ -1,0 +1,5 @@
+[
+  [["minecraft:sea_grass", []], ["minecraft:seagrass", []]], 
+  [["minecraft:tall_sea_grass", [["half", "upper"]]], ["minecraft:tall_seagrass", [["half", "upper"]]]], 
+  [["minecraft:tall_sea_grass", [["half", "lower"]]], ["minecraft:tall_seagrass", [["half", "lower"]]]]
+]

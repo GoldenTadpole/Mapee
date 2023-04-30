@@ -1,0 +1,8 @@
+{
+    "Name": "Lava",
+    "Id": "lava",
+    "OrderedIndex": 12,
+    "AllowedDimensions": "dimension != minecraft:the_end",
+    "AutomaticallyDisableNight": false,
+    "DisableDatapackStyle": false
+}

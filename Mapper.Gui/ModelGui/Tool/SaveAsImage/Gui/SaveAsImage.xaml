@@ -1,0 +1,104 @@
+﻿<Window x:Class="Mapper.Gui.SaveAsImageControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mapper.Gui"
+        mc:Ignorable="d"
+        BorderBrush="#FF454545"
+        BorderThickness="1"
+        ResizeMode="NoResize"
+        UseLayoutRounding="True"
+        Icon="/Resources/Icon/ToolButton/ExportAsImage_64px.ico"
+        Template="{DynamicResource CustomWindowFrameTemplate}"
+        Title="Save as image" Height="325" Width="387" Background="#FF232323" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0" UseAeroCaptionButtons="False" ResizeBorderThickness="7"/>
+    </WindowChrome.WindowChrome>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Template/CustomWindowFrameTemplate.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Margin="15, 15, 0, 0" Grid.Row="1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="5, 5, 0, 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="165" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <RadioButton x:Name="ScreenshotRadioButton" Foreground="#FFEEEEEE" Content="Screenshot" IsChecked="True" Grid.Column="0" Checked="ScreenshotRadioButton_Checked" />
+            <RadioButton x:Name="FullResolutionButton" Foreground="#FFEEEEEE" Content="Full resolution" Grid.Column="1" Checked="FullResolutionButton_Checked" />
+        </Grid>
+
+        <TextBlock x:Name="DescriptionLabel" Foreground="#FFBBBBBB" Text="Description:" FontStyle="Italic" TextWrapping="WrapWithOverflow" Margin="25, 5, 10, 0" Grid.Row="1" />
+
+        <Border BorderBrush="#FF606060" BorderThickness="0, 1, 0, 0" Grid.Row="2" HorizontalAlignment="Left">
+            <Grid x:Name="FullResolutionPanel" Margin="5, 8, 0, 0" Width="350">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Label Content="Area" FontSize="14" FontWeight="Bold" Margin="14, 0, 0, 1" Foreground="#FFEEEEEE" Grid.Row="0" />
+                
+                <CheckBox x:Name="ClipAreaCheckBox" IsChecked="True" Content="Clip area to only rendered regions" Foreground="#FFEEEEEE" Grid.Row="1" Checked="ClipAreaCheckBox_Checked" Unchecked="ClipAreaCheckBox_Unchecked" />
+
+                <Label Content="Background" FontSize="14" FontWeight="Bold" Margin="14, 0, 0, 1" Foreground="#FFEEEEEE" Grid.Row="2" />
+
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120" />
+                        <ColumnDefinition Width="70" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <RadioButton x:Name="CheckerPatternRadioBox" IsChecked="True" Content="Checker pattern" Foreground="#FFEEEEEE" Grid.Column="0" />
+                    <RadioButton x:Name="BlackColorRadioBox" Content="Black" Foreground="#FFEEEEEE" Grid.Column="1" />
+                    <RadioButton x:Name="InvisibleColorRadioBox" Content="Invisible" Foreground="#FFEEEEEE" Grid.Column="2" />
+                </Grid>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="3" Margin="0, 0, 0, 13" Width="100" Height="25" BorderThickness="1" BorderBrush="#FF707070" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <Button Content="Save as..." Width="100" Height="25" Foreground="#FFCCCCCC" Click="SaveButton_Click">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#FF353535"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}" >
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF555555"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#FF707070"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </Border>
+    </Grid>
+</Window>

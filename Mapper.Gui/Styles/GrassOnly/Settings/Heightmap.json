@@ -1,0 +1,25 @@
+{
+    "Default": {
+        "Type": "SetY",
+        "SetY": 319,
+        "Heightmap": "WORLD_SURFACE"
+    },
+    "Dimensions": [
+        {
+            "Dimension": "minecraft:overworld",
+            "Settings": {
+                "Type": "Heightmap",
+                "SetY": 319,
+                "Heightmap": "WORLD_SURFACE"
+            }
+        },
+        {
+            "Dimension": "minecraft:nether",
+            "Settings": {
+                "Type": "SetY",
+                "SetY": 80,
+                "Heightmap": "WORLD_SURFACE"
+            }
+        }
+    ]
+}

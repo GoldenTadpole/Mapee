@@ -1,0 +1,8 @@
+{
+    "Name": "Y = 70",
+    "Id": "y70",
+    "OrderedIndex": 3,
+    "AllowedDimensions": "dimension != *",
+    "AutomaticallyDisableNight": false,
+    "DisableDatapackStyle": false
+}

@@ -1,0 +1,16 @@
+[
+  [["minecraft:azalea_leaves_flowers", [["distance", "1"], ["persistent", "true"]]], ["minecraft:flowering_azalea_leaves", [["distance", "1"], ["persistent", "true"]]]], 
+  [["minecraft:azalea_leaves_flowers", [["distance", "1"], ["persistent", "false"]]], ["minecraft:flowering_azalea_leaves", [["distance", "1"], ["persistent", "false"]]]], 
+  [["minecraft:azalea_leaves_flowers", [["distance", "2"], ["persistent", "true"]]], ["minecraft:flowering_azalea_leaves", [["distance", "2"], ["persistent", "true"]]]], 
+  [["minecraft:azalea_leaves_flowers", [["distance", "2"], ["persistent", "false"]]], ["minecraft:flowering_azalea_leaves", [["distance", "2"], ["persistent", "false"]]]], 
+  [["minecraft:azalea_leaves_flowers", [["distance", "3"], ["persistent", "true"]]], ["minecraft:flowering_azalea_leaves", [["distance", "3"], ["persistent", "true"]]]], 
+  [["minecraft:azalea_leaves_flowers", [["distance", "3"], ["persistent", "false"]]], ["minecraft:flowering_azalea_leaves", [["distance", "3"], ["persistent", "false"]]]], 
+  [["minecraft:azalea_leaves_flowers", [["distance", "4"], ["persistent", "true"]]], ["minecraft:flowering_azalea_leaves", [["distance", "4"], ["persistent", "true"]]]], 
+  [["minecraft:azalea_leaves_flowers", [["distance", "4"], ["persistent", "false"]]], ["minecraft:flowering_azalea_leaves", [["distance", "4"], ["persistent", "false"]]]], 
+  [["minecraft:azalea_leaves_flowers", [["distance", "5"], ["persistent", "true"]]], ["minecraft:flowering_azalea_leaves", [["distance", "5"], ["persistent", "true"]]]], 
+  [["minecraft:azalea_leaves_flowers", [["distance", "5"], ["persistent", "false"]]], ["minecraft:flowering_azalea_leaves", [["distance", "5"], ["persistent", "false"]]]], 
+  [["minecraft:azalea_leaves_flowers", [["distance", "6"], ["persistent", "true"]]], ["minecraft:flowering_azalea_leaves", [["distance", "6"], ["persistent", "true"]]]], 
+  [["minecraft:azalea_leaves_flowers", [["distance", "6"], ["persistent", "false"]]], ["minecraft:flowering_azalea_leaves", [["distance", "6"], ["persistent", "false"]]]], 
+  [["minecraft:azalea_leaves_flowers", [["distance", "7"], ["persistent", "true"]]], ["minecraft:flowering_azalea_leaves", [["distance", "7"], ["persistent", "true"]]]], 
+  [["minecraft:azalea_leaves_flowers", [["distance", "7"], ["persistent", "false"]]], ["minecraft:flowering_azalea_leaves", [["distance", "7"], ["persistent", "false"]]]]
+]

@@ -1,0 +1,8 @@
+{
+    "Name": "Grass only",
+    "Id": "grass",
+    "OrderedIndex": 13,
+    "AllowedDimensions": "dimension == minecraft:overworld",
+    "AutomaticallyDisableNight": false,
+    "DisableDatapackStyle": false
+}

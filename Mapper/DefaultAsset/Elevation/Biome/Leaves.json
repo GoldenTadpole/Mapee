@@ -1,0 +1,12 @@
+﻿{
+    "Header": {
+        "PayloadName": "Elevation"
+    },
+
+    "Blocks": ["minecraft:oak_leaves"],
+
+    "Biomes": [
+      ["minecraft:jungle", {"Y": 70, "Min": -10, "MinIncr": 0.02, "Max": 12, "MaxIncr": 0.01}],
+      ["minecraft:wooded_badlands", {"Max": 27, "MaxIncr": 0.015}]
+    ]
+}

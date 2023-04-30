@@ -1,0 +1,8 @@
+{
+    "Name": "Geodes",
+    "Id": "geodes",
+    "OrderedIndex": 11,
+    "AllowedDimensions": "dimension == minecraft:overworld",
+    "AutomaticallyDisableNight": true,
+    "DisableDatapackStyle": false
+}

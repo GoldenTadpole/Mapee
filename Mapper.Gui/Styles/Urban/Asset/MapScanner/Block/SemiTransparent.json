@@ -1,0 +1,522 @@
+﻿[
+  {"DefaultPayload": "SemiTransparent"},
+  
+  "minecraft:glass",
+  "minecraft:white_stained_glass",
+  "minecraft:orange_stained_glass",
+  "minecraft:magenta_stained_glass",
+  "minecraft:light_blue_stained_glass",
+  "minecraft:yellow_stained_glass",
+  "minecraft:lime_stained_glass",
+  "minecraft:pink_stained_glass",
+  "minecraft:gray_stained_glass",
+  "minecraft:light_gray_stained_glass",
+  "minecraft:cyan_stained_glass",
+  "minecraft:purple_stained_glass",
+  "minecraft:blue_stained_glass",
+  "minecraft:brown_stained_glass",
+  "minecraft:green_stained_glass",
+  "minecraft:red_stained_glass",
+  "minecraft:black_stained_glass",
+  "minecraft:tinted_glass",
+
+  ["minecraft:oak_leaves", {"GroupBy": "oak_leaves", "ExitOnDepth": 2}],
+  ["minecraft:spruce_leaves", {"GroupBy": "spruce_leaves", "ExitOnDepth": 2}],
+  ["minecraft:birch_leaves", {"GroupBy": "birch_leaves", "ExitOnDepth": 2}],
+  ["minecraft:jungle_leaves", {"GroupBy": "jungle_leaves", "ExitOnDepth": 2}],
+  ["minecraft:acacia_leaves", {"GroupBy": "acacia_leaves", "ExitOnDepth": 2}],
+  ["minecraft:dark_oak_leaves", {"GroupBy": "dark_oak_leaves", "ExitOnDepth": 2}],
+  ["minecraft:mangrove_leaves", {"GroupBy": "mangrove_leaves", "ExitOnDepth": 2}],
+  ["minecraft:azalea_leaves", {"GroupBy": "azalea_leaves", "ExitOnDepth": 2}],
+  ["minecraft:flowering_azalea_leaves", {"GroupBy": "flowering_azalea_leaves", "ExitOnDepth": 2}],
+
+  "minecraft:ice",
+
+  
+
+
+  "minecraft:small_amethyst_bud",
+  "minecraft:medium_amethyst_bud",
+  "minecraft:large_amethyst_bud",
+
+  "minecraft:amethyst_cluster",
+
+  "minecraft:anvil",
+  "minecraft:chipped_anvil",
+  "minecraft:damaged_anvil",
+
+  "minecraft:bamboo",
+  "minecraft:bamboo_sapling",
+
+  "minecraft:bell",
+
+  "minecraft:big_dripleaf",
+  "minecraft:big_dripleaf_stem",
+
+  "minecraft:brewing_stand",
+
+  "minecraft:bubble_column",
+
+  "minecraft:cactus",
+
+  "minecraft:cake",
+  "minecraft:candle_cake",
+  "minecraft:white_candle_cake",
+  "minecraft:orange_candle_cake",
+  "minecraft:magenta_candle_cake",
+  "minecraft:light_blue_candle_cake",
+  "minecraft:yellow_candle_cake",
+  "minecraft:lime_candle_cake",
+  "minecraft:pink_candle_cake",
+  "minecraft:gray_candle_cake",
+  "minecraft:light_gray_candle_cake",
+  "minecraft:cyan_candle_cake",
+  "minecraft:purple_candle_cake",
+  "minecraft:blue_candle_cake",
+  "minecraft:brown_candle_cake",
+  "minecraft:green_candle_cake",
+  "minecraft:red_candle_cake",
+  "minecraft:black_candle_cake",
+
+  "minecraft:campfire",
+  "minecraft:soul_campfire",
+
+  "minecraft:candle",
+  "minecraft:white_candle",
+  "minecraft:orange_candle",
+  "minecraft:magenta_candle",
+  "minecraft:light_blue_candle",
+  "minecraft:yellow_candle",
+  "minecraft:lime_candle",
+  "minecraft:pink_candle",
+  "minecraft:gray_candle",
+  "minecraft:light_gray_candle",
+  "minecraft:cyan_candle",
+  "minecraft:purple_candle",
+  "minecraft:blue_candle",
+  "minecraft:brown_candle",
+  "minecraft:green_candle",
+  "minecraft:red_candle",
+  "minecraft:black_candle",
+
+  "minecraft:chain",
+
+  "minecraft:chest",
+
+  "minecraft:chorus_flower",
+
+  "minecraft:chorus_plant",
+
+  "minecraft:cobweb",
+
+  "minecraft:cocoa",
+
+  "minecraft:conduit",
+
+  "minecraft:dragon_egg",
+
+  "minecraft:end_rod",
+
+  "minecraft:ender_chest",
+
+  "minecraft:oak_fence",
+  "minecraft:spruce_fence",
+  "minecraft:birch_fence",
+  "minecraft:jungle_fence",
+  "minecraft:acacia_fence",
+  "minecraft:dark_oak_fence",
+  "minecraft:mangrove_fence",
+  "minecraft:crimson_fence",
+  "minecraft:warped_fence",
+  "minecraft:nether_brick_fence",
+
+  ["minecraft:piston*", "extended == true && facing &&!= [up down]"],
+  ["minecraft:sticky_piston*", "extended == true && facing &&!= [up down]"],
+
+  ["minecraft:piston_head*", "facing &&!= [up down]"],
+  ["minecraft:moving_piston*", "facing &&!= [up down]"],
+
+  "minecraft:flower_pot",
+  "minecraft:potted_dandelion",
+  "minecraft:potted_poppy",
+  "minecraft:potted_blue_orchid",
+  "minecraft:potted_allium",
+  "minecraft:potted_azure_bluet",
+  "minecraft:potted_red_tulip",
+  "minecraft:potted_orange_tulip",
+  "minecraft:potted_white_tulip",
+  "minecraft:potted_pink_tulip",
+  "minecraft:potted_oxeye_daisy",
+  "minecraft:potted_cornflower",
+  "minecraft:potted_lily_of_the_valley",
+  "minecraft:potted_wither_rose",
+  "minecraft:potted_oak_sapling",
+  "minecraft:potted_spruce_sapling",
+  "minecraft:potted_birch_sapling",
+  "minecraft:potted_jungle_sapling",
+  "minecraft:potted_acacia_sapling",
+  "minecraft:potted_dark_oak_sapling",
+  "minecraft:potted_red_mushroom",
+  "minecraft:potted_brown_mushroom",
+  "minecraft:potted_fern",
+  "minecraft:potted_dead_bush",
+  "minecraft:potted_cactus",
+  "minecraft:potted_bamboo",
+  "minecraft:potted_azalea_bush",
+  "minecraft:potted_flowering_azalea_bush",
+  "minecraft:potted_crimson_fungus",
+  "minecraft:potted_warped_fungus",
+  "minecraft:potted_crimson_roots",
+  "minecraft:potted_warped_roots",
+  "minecraft:potted_mangrove_propagule",
+
+  "minecraft:glass_pane",
+  "minecraft:white_stained_glass_pane",
+  "minecraft:orange_stained_glass_pane",
+  "minecraft:magenta_stained_glass_pane",
+  "minecraft:light_blue_stained_glass_pane",
+  "minecraft:yellow_stained_glass_pane",
+  "minecraft:lime_stained_glass_pane",
+  "minecraft:pink_stained_glass_pane",
+  "minecraft:gray_stained_glass_pane",
+  "minecraft:light_gray_stained_glass_pane",
+  "minecraft:cyan_stained_glass_pane",
+  "minecraft:purple_stained_glass_pane",
+  "minecraft:blue_stained_glass_pane",
+  "minecraft:brown_stained_glass_pane",
+  "minecraft:green_stained_glass_pane",
+  "minecraft:red_stained_glass_pane",
+  "minecraft:black_stained_glass_pane",
+
+  "minecraft:grindstone",
+
+  "minecraft:honey_block",
+
+  "minecraft:iron_bars",
+
+  "minecraft:ladder",
+
+  "minecraft:lantern",
+  "minecraft:soul_lantern",
+
+  "minecraft:lectern",
+
+  "minecraft:lightning_rod",
+
+  "minecraft:lily_pad",
+
+  "minecraft:skeleton_skull",
+  "minecraft:wither_skeleton_skull",
+  "minecraft:zombie_head",
+  "minecraft:player_head",
+  "minecraft:creeper_head",
+  "minecraft:dragon_head",
+  "minecraft:skeleton_wall_skull",
+  "minecraft:wither_skeleton_wall_skull",
+  "minecraft:zombie_wall_head",
+  "minecraft:player_wall_head",
+  "minecraft:creeper_wall_head",
+  "minecraft:dragon_wall_head",
+
+  "minecraft:pointed_dripstone",
+
+  "minecraft:scaffolding",
+
+  "minecraft:sea_pickle",
+
+  "minecraft:sweet_berry_bush",
+
+  "minecraft:turtle_egg",
+
+  "minecraft:cobblestone_wall",
+  "minecraft:mossy_cobblestone_wall",
+  "minecraft:stone_brick_wall",
+  "minecraft:mossy_stone_brick_wall",
+  "minecraft:andesite_wall",
+  "minecraft:diorite_wall",
+  "minecraft:granite_wall",
+  "minecraft:sandstone_wall",
+  "minecraft:red_sandstone_wall",
+  "minecraft:brick_wall",
+  "minecraft:prismarine_wall",
+  "minecraft:nether_brick_wall",
+  "minecraft:red_nether_brick_wall",
+  "minecraft:end_stone_brick_wall",
+  "minecraft:blackstone_wall",
+  "minecraft:polished_blackstone_wall",
+  "minecraft:polished_blackstone_brick_wall",
+  "minecraft:cobbled_deepslate_wall",
+  "minecraft:polished_deepslate_wall",
+  "minecraft:deepslate_brick_wall",
+  "minecraft:deepslate_tile_wall",
+  "minecraft:mud_brick_wall",
+
+
+
+  "minecraft:iron_door",
+  "minecraft:oak_door",
+  "minecraft:spruce_door",
+  "minecraft:birch_door",
+  "minecraft:jungle_door",
+  "minecraft:acacia_door",
+  "minecraft:dark_oak_door",
+  "minecraft:mangrove_door",
+  "minecraft:crimson_door",
+  "minecraft:warped_door",
+
+  "minecraft:oak_fence_gate",
+  "minecraft:spruce_fence_gate",
+  "minecraft:birch_fence_gate",
+  "minecraft:jungle_fence_gate",
+  "minecraft:acacia_fence_gate",
+  "minecraft:dark_oak_fence_gate",
+  "minecraft:mangrove_fence_gate",
+  "minecraft:crimson_fence_gate",
+  "minecraft:warped_fence_gate",
+
+  "minecraft:iron_trapdoor",
+  "minecraft:oak_trapdoor",
+  "minecraft:spruce_trapdoor",
+  "minecraft:birch_trapdoor",
+  "minecraft:jungle_trapdoor",
+  "minecraft:acacia_trapdoor",
+  "minecraft:dark_oak_trapdoor",
+  "minecraft:mangrove_trapdoor",
+  "minecraft:crimson_trapdoor",
+  "minecraft:warped_trapdoor",
+
+  "minecraft:trapped_chest",
+
+  "minecraft:white_banner",
+  "minecraft:orange_banner",
+  "minecraft:magenta_banner",
+  "minecraft:light_blue_banner",
+  "minecraft:yellow_banner",
+  "minecraft:lime_banner",
+  "minecraft:pink_banner",
+  "minecraft:gray_banner",
+  "minecraft:light_gray_banner",
+  "minecraft:cyan_banner",
+  "minecraft:purple_banner",
+  "minecraft:blue_banner",
+  "minecraft:brown_banner",
+  "minecraft:green_banner",
+  "minecraft:red_banner",
+  "minecraft:black_banner",
+  "minecraft:white_wall_banner",
+  "minecraft:orange_wall_banner",
+  "minecraft:magenta_wall_banner",
+  "minecraft:light_blue_wall_banner",
+  "minecraft:yellow_wall_banner",
+  "minecraft:lime_wall_banner",
+  "minecraft:pink_wall_banner",
+  "minecraft:gray_wall_banner",
+  "minecraft:light_gray_wall_banner",
+  "minecraft:cyan_wall_banner",
+  "minecraft:purple_wall_banner",
+  "minecraft:blue_wall_banner",
+  "minecraft:brown_wall_banner",
+  "minecraft:green_wall_banner",
+  "minecraft:red_wall_banner",
+  "minecraft:black_wall_banner",
+
+  "minecraft:cave_vines",
+  "minecraft:cave_vines_plant",
+
+  "minecraft:tube_coral",
+  "minecraft:brain_coral",
+  "minecraft:bubble_coral",
+  "minecraft:fire_coral",
+  "minecraft:horn_coral",
+  "minecraft:dead_tube_coral",
+  "minecraft:dead_brain_coral",
+  "minecraft:dead_bubble_coral",
+  "minecraft:dead_fire_coral",
+  "minecraft:dead_horn_coral",
+
+  "minecraft:wheat",
+  "minecraft:beetroots",
+  "minecraft:carrots",
+  "minecraft:potatoes",
+
+  "minecraft:dead_bush",
+
+  "minecraft:tube_coral_fan",
+  "minecraft:brain_coral_fan",
+  "minecraft:bubble_coral_fan",
+  "minecraft:fire_coral_fan",
+  "minecraft:horn_coral_fan",
+  "minecraft:dead_tube_coral_fan",
+  "minecraft:dead_brain_coral_fan",
+  "minecraft:dead_bubble_coral_fan",
+  "minecraft:dead_fire_coral_fan",
+  "minecraft:dead_horn_coral_fan",
+  "minecraft:tube_coral_wall_fan",
+  "minecraft:brain_coral_wall_fan",
+  "minecraft:bubble_coral_wall_fan",
+  "minecraft:fire_coral_wall_fan",
+  "minecraft:horn_coral_wall_fan",
+  "minecraft:dead_tube_coral_wall_fan",
+  "minecraft:dead_brain_coral_wall_fan",
+  "minecraft:dead_bubble_coral_wall_fan",
+  "minecraft:dead_fire_coral_wall_fan",
+  "minecraft:dead_horn_coral_wall_fan",
+
+  "minecraft:grass",
+  "minecraft:fern",
+  "minecraft:tall_grass",
+  "minecraft:large_fern",
+
+  "minecraft:fire",
+  "minecraft:soul_fire",
+
+  "minecraft:dandelion",
+  "minecraft:poppy",
+  "minecraft:blue_orchid",
+  "minecraft:allium",
+  "minecraft:azure_bluet",
+  "minecraft:red_tulip",
+  "minecraft:orange_tulip",
+  "minecraft:white_tulip",
+  "minecraft:pink_tulip",
+  "minecraft:oxeye_daisy",
+  "minecraft:cornflower",
+  "minecraft:lily_of_the_valley",
+  "minecraft:wither_rose",
+  "minecraft:sunflower",
+  "minecraft:lilac",
+  "minecraft:rose_bush",
+  "minecraft:peony",
+
+  "minecraft:crimson_fungus",
+  "minecraft:warped_fungus",
+
+  "minecraft:glow_lichen",
+
+  "minecraft:hanging_roots",
+
+  "minecraft:kelp",
+  "minecraft:kelp_plant",
+
+  "minecraft:brown_mushroom",
+  "minecraft:red_mushroom",
+
+  "minecraft:nether_portal",
+
+  "minecraft:nether_sprouts",
+
+  "minecraft:nether_wart",
+
+  "minecraft:crimson_roots",
+  "minecraft:warped_roots",
+
+  "minecraft:oak_sapling",
+  "minecraft:spruce_sapling",
+  "minecraft:birch_sapling",
+  "minecraft:jungle_sapling",
+  "minecraft:acacia_sapling",
+  "minecraft:dark_oak_sapling",
+  "minecraft:mangrove_propagule",
+
+  "minecraft:seagrass",
+  "minecraft:tall_seagrass",
+
+  "minecraft:oak_sign",
+  "minecraft:spruce_sign",
+  "minecraft:birch_sign",
+  "minecraft:jungle_sign",
+  "minecraft:acacia_sign",
+  "minecraft:dark_oak_sign",
+  "minecraft:mangrove_sign",
+  "minecraft:crimson_sign",
+  "minecraft:warped_sign",
+  "minecraft:oak_wall_sign",
+  "minecraft:spruce_wall_sign",
+  "minecraft:birch_wall_sign",
+  "minecraft:jungle_wall_sign",
+  "minecraft:acacia_wall_sign",
+  "minecraft:dark_oak_wall_sign",
+  "minecraft:mangrove_wall_sign",
+  "minecraft:crimson_wall_sign",
+  "minecraft:warped_wall_sign",
+
+  "minecraft:small_dripleaf",
+
+  "minecraft:torch",
+  "minecraft:soul_torch",
+  "minecraft:wall_torch",
+  "minecraft:soul_wall_torch",
+
+  "minecraft:spore_blossom",
+
+  "minecraft:pumpkin_stem",
+  "minecraft:attached_pumpkin_stem",
+
+  "minecraft:sugar_cane",
+
+  "minecraft:twisting_vines",
+  "minecraft:twisting_vines_plant",
+
+  "minecraft:vine",
+
+  "minecraft:weeping_vines",
+  "minecraft:weeping_vines_plant",
+
+
+
+
+  "minecraft:stone_button",
+  "minecraft:oak_button",
+  "minecraft:spruce_button",
+  "minecraft:birch_button",
+  "minecraft:jungle_button",
+  "minecraft:acacia_button",
+  "minecraft:dark_oak_button",
+  "minecraft:mangrove_button",
+  "minecraft:crimson_button",
+  "minecraft:warped_button",
+  "minecraft:polished_blackstone_button",
+
+  "minecraft:lever",
+
+  "minecraft:light_weighted_pressure_plate",
+  "minecraft:heavy_weighted_pressure_plate",
+  "minecraft:stone_pressure_plate",
+  "minecraft:polished_blackstone_pressure_plate",
+  "minecraft:oak_pressure_plate",
+  "minecraft:spruce_pressure_plate",
+  "minecraft:birch_pressure_plate",
+  "minecraft:jungle_pressure_plate",
+  "minecraft:acacia_pressure_plate",
+  "minecraft:dark_oak_pressure_plate",
+  "minecraft:mangrove_pressure_plate",
+  "minecraft:crimson_pressure_plate",
+  "minecraft:warped_pressure_plate",
+
+  "minecraft:rail",
+
+  "minecraft:activator_rail",
+
+  "minecraft:detector_rail",
+
+  "minecraft:powered_rail",
+
+  "minecraft:redstone_wire",
+
+  "minecraft:redstone_torch",
+  "minecraft:redstone_wall_torch",
+
+  "minecraft:tripwire",
+
+  "minecraft:tripwire_hook",
+
+
+
+
+  "minecraft:water",
+
+
+
+
+  "minecraft:spawner"
+]

@@ -1,0 +1,9 @@
+[
+  [["minecraft:soul_fire_lantern", [["hanging", "true"]]], ["minecraft:soul_lantern", [["hanging", "true"]]]], 
+  [["minecraft:soul_fire_lantern", [["hanging", "false"]]], ["minecraft:soul_lantern", [["hanging", "false"]]]], 
+  [["minecraft:soul_fire_torch", []], ["minecraft:soul_torch", []]], 
+  [["minecraft:soul_fire_wall_torch", [["facing", "north"]]], ["minecraft:soul_wall_torch", [["facing", "north"]]]], 
+  [["minecraft:soul_fire_wall_torch", [["facing", "south"]]], ["minecraft:soul_wall_torch", [["facing", "south"]]]], 
+  [["minecraft:soul_fire_wall_torch", [["facing", "west"]]], ["minecraft:soul_wall_torch", [["facing", "west"]]]], 
+  [["minecraft:soul_fire_wall_torch", [["facing", "east"]]], ["minecraft:soul_wall_torch", [["facing", "east"]]]]
+]

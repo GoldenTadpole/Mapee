@@ -1,0 +1,8 @@
+{
+    "Name": "Stone only",
+    "Id": "stone",
+    "OrderedIndex": 4,
+    "AllowedDimensions": "dimension == minecraft:overworld",
+    "AutomaticallyDisableNight": true,
+    "DisableDatapackStyle": false
+}

@@ -1,0 +1,8 @@
+{
+    "Name": "Alpha",
+    "Id": "alpha",
+    "OrderedIndex": 5,
+    "AllowedDimensions": "dimension != *",
+    "AutomaticallyDisableNight": false,
+    "DisableDatapackStyle": true
+}

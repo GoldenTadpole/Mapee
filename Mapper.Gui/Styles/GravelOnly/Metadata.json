@@ -1,0 +1,8 @@
+{
+    "Name": "Gravel only",
+    "Id": "gravel",
+    "OrderedIndex": 8,
+    "AllowedDimensions": "dimension == minecraft:overworld",
+    "AutomaticallyDisableNight": true,
+    "DisableDatapackStyle": false
+}

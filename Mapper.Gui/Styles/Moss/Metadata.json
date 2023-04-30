@@ -1,0 +1,8 @@
+{
+    "Name": "Moss",
+    "Id": "moss",
+    "OrderedIndex": 9,
+    "AllowedDimensions": "dimension == minecraft:overworld",
+    "AutomaticallyDisableNight": true,
+    "DisableDatapackStyle": false
+}

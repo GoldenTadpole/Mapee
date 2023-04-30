@@ -1,0 +1,8 @@
+{
+    "Name": "Sand only",
+    "Id": "sand",
+    "OrderedIndex": 14,
+    "AllowedDimensions": "dimension == minecraft:overworld",
+    "AutomaticallyDisableNight": false,
+    "DisableDatapackStyle": false
+}

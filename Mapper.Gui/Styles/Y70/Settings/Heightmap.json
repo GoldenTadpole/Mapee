@@ -1,0 +1,7 @@
+{
+    "Default": {
+        "Type": "SetY",
+        "SetY": 70,
+        "Heightmap": "WORLD_SURFACE"
+    }
+}

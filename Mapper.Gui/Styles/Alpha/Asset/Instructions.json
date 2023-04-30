@@ -1,0 +1,40 @@
+{
+    "BlockGrouping": {
+        "Source": "*UseDefault"
+    },
+    "BlockColor": {
+        "Source": "BlockColor"
+    },
+    "BiomeColor": {
+        "Source": null,
+        "DefaultOutput": null
+    },
+    "Elevation": {
+        "Source": "Elevation",
+        "DefaultBiome": null,
+        "DefaultOutput": {
+            "Y": 63,
+            "MinSteps": -10,
+            "MinIncrement": 0.0156,
+            "MaxSteps": 20,
+            "MaxIncrement": 0.01755,
+            "MultiplyMaxIncrement": true,
+            "Hue": [1, 1, 1]
+        }
+    },
+    "DepthOpacity": {
+        "Source": "DepthOpacity",
+        "DefaultBiome": null,
+        "DefaultOutput": {
+            "OpacityMul": 1,
+            "MaxDepth": 1,
+            "Id": null
+        }
+    },
+    "Step": {
+        "Source": "*UseDefault"
+    },
+    "StepSettings": {
+        "Source": "*UseDefault"
+    }
+}

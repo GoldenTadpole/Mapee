@@ -1,0 +1,13 @@
+{
+    "Default": {
+        "SkyLight": 1,
+        "AmbientLight": 1,
+        "AltitudeYOffset": 50,
+        "TransparentBlockStepIntensity": 2,
+        "Background": {
+            "IsChecker": true,
+            "ColorPair": [[10, 10, 10], [15, 15, 15]]
+        }
+    },
+    "Dimensions": []
+}

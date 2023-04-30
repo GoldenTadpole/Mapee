@@ -1,0 +1,101 @@
+{
+    "BlockGrouping": {
+        "Source": "BlockGrouping",
+        "DefaultOutput": "Disabled"
+    },
+    "BlockColor": {
+        "Source": "BlockColor",
+        "DefaultOutput": null
+    },
+    "BiomeColor": {
+        "Source": "BiomeColor",
+        "DefaultBiome": "minecraft:plains",
+        "DefaultOutput": null
+    },
+    "Elevation": {
+        "Source": "Elevation",
+        "DefaultBiome": "minecraft:plains",
+        "DefaultOutput": {
+            "Y": 70,
+            "MinSteps": -10,
+            "MinIncrement": 0.0156,
+            "MaxSteps": 25,
+            "MaxIncrement": 0.01755,
+            "MultiplyMaxIncrement": true,
+            "Hue": [1, 1, 1]
+        }
+    },
+    "DepthOpacity": {
+        "Source": "DepthOpacity",
+        "DefaultBiome": "minecraft:plains",
+        "DefaultOutput": {
+            "OpacityMul": 1,
+            "MaxDepth": 1,
+            "Id": null
+        }
+    },
+    "Step": {
+        "Source": "Step",
+        "DefaultOutput": "StopAtEncounter"
+    },
+    "StepSettings": {
+        "Source": "StepSettings",
+        "DefaultOutput": {
+            "ZNegCorner.BelowLimit.Max": 32767,
+            "ZNegCorner.BelowLimit.MaxReturnedValue": 0,
+            "ZNegCorner.BelowLimit.Min": 0,
+            "ZNegCorner.BelowLimit.MinReturnedValue": 0,
+            "ZNegCorner.BelowIncrement": 1,
+            "ZNegCorner.AboveLimit.Max": 1,
+            "ZNegCorner.AboveLimit.MaxReturnedValue": 0,
+            "ZNegCorner.AboveLimit.Min": 0,
+            "ZNegCorner.AboveLimit.MinReturnedValue": 0,
+            "ZNegCorner.AboveIncrement": 1,
+
+            "XPosCorner.BelowLimit.Max": 32767,
+            "XPosCorner.BelowLimit.MaxReturnedValue": 0,
+            "XPosCorner.BelowLimit.Min": 0,
+            "XPosCorner.BelowLimit.MinReturnedValue": 0,
+            "XPosCorner.BelowIncrement": 1,
+            "XPosCorner.AboveLimit.Max": 1,
+            "XPosCorner.AboveLimit.MaxReturnedValue": 0,
+            "XPosCorner.AboveLimit.Min": 0,
+            "XPosCorner.AboveLimit.MinReturnedValue": 0,
+            "XPosCorner.AboveIncrement": 1,
+
+            "ZPosCorner.BelowLimit.Max": 32767,
+            "ZPosCorner.BelowLimit.MaxReturnedValue": 0,
+            "ZPosCorner.BelowLimit.Min": 0,
+            "ZPosCorner.BelowLimit.MinReturnedValue": 0,
+            "ZPosCorner.BelowIncrement": 0.4,
+            "ZPosCorner.AboveLimit.Max": 1,
+            "ZPosCorner.AboveLimit.MaxReturnedValue": 0,
+            "ZPosCorner.AboveLimit.Min": 0,
+            "ZPosCorner.AboveLimit.MinReturnedValue": 0,
+            "ZPosCorner.AboveIncrement": 0.4,
+
+            "XNegCorner.BelowLimit.Max": 32767,
+            "XNegCorner.BelowLimit.MaxReturnedValue": 0,
+            "XNegCorner.BelowLimit.Min": 0,
+            "XNegCorner.BelowLimit.MinReturnedValue": 0,
+            "XNegCorner.BelowIncrement": 0.2,
+            "XNegCorner.AboveLimit.Max": 1,
+            "XNegCorner.AboveLimit.MaxReturnedValue": 0,
+            "XNegCorner.AboveLimit.Min": 0,
+            "XNegCorner.AboveLimit.MinReturnedValue": 0,
+            "XNegCorner.AboveIncrement": 0.2,
+
+            "BelowTotalLimit.Max": 10,
+            "BelowTotalLimit.MaxReturnedValue": 10,
+            "BelowTotalLimit.Min": 0,
+            "BelowTotalLimit.MinReturnedValue": 0,
+
+            "AboveTotalLimit.Max": 0,
+            "AboveTotalLimit.MaxReturnedValue": 0.25,
+            "AboveTotalLimit.Min": 0,
+            "AboveTotalLimit.MinReturnedValue": 0,
+
+            "Increment": 0.166666
+        }
+    }
+}

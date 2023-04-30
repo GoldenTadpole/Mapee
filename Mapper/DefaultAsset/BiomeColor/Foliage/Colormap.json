@@ -1,0 +1,144 @@
+{
+    "Header": {
+        "PayloadName": "Pixel",
+        "Extra": {"Type": "HardCoded"}
+    },
+    
+    "Blocks": [
+        "minecraft:oak_leaves",
+        "minecraft:jungle_leaves",
+        "minecraft:acacia_leaves",
+        "minecraft:dark_oak_leaves",
+        "minecraft:mangrove_leaves",
+        "minecraft:vine"
+    ],
+
+    "Biomes": [
+        {
+            "Biomes": [
+                "minecraft:snowy_plains",
+                "minecraft:ice_spikes",
+                "minecraft:snowy_taiga",
+                "minecraft:grove",
+                "minecraft:snowy_slopes",
+                "minecraft:jagged_peaks",
+                "minecraft:frozen_peaks"
+            ],
+            "Pixel": "#60A17B"
+        },
+        ["minecraft:snowy_beach", "#64A278"],
+        
+        {
+            "Biomes": [
+                "minecraft:windswept_hills",
+                "minecraft:windswept_gravelly_hills",
+                "minecraft:windswept_forest",
+                "minecraft:stony_shore"
+            ],
+            "Pixel": "#6DA36B"
+        },
+        {
+            "Biomes": [
+                "minecraft:taiga",
+                "minecraft:old_growth_spruce_taiga"
+            ],
+            "Pixel": "#68A464"
+        },
+        ["minecraft:old_growth_pine_taiga", "#68A55F"],
+
+        {
+            "Biomes": [
+                "minecraft:plains",
+                "minecraft:sunflower_plains"
+            ],
+            "Pixel": "#77AB2F"
+        },
+        {
+            "Biomes": [
+                "minecraft:forest",
+                "minecraft:flower_forest"
+            ],
+            "Pixel": "#59AE30"
+        },
+        {
+            "Biomes": [
+                "minecraft:birch_forest",
+                "minecraft:old_growth_birch_forest"
+            ],
+            "Pixel": "#6BA941"
+        },
+        ["minecraft:dark_forest", "#6BA941"],
+        {
+            "Biomes": [
+                "minecraft:jungle",
+                "minecraft:bamboo_jungle"
+            ],
+            "Pixel": "#30BB0B"
+        },
+        ["minecraft:sparse_jungle", "#3EB80F"],
+        ["minecraft:beach", "#77AB2F"],
+        ["minecraft:mushroom_fields", "#2BBB0F"],
+        ["minecraft:meadow", "#63A948"],
+        ["minecraft:stony_peaks", "#82AC1E"],
+
+        {
+            "Biomes": [
+                "minecraft:desert",
+                "minecraft:savanna",
+                "minecraft:savanna_plateau",
+                "minecraft:windswept_savanna"
+            ],
+            "Pixel": "#AEA42A"
+        },
+
+        ["minecraft:river", "#71A74D"],
+        ["minecraft:frozen_river", "#60A17B"],
+        {
+            "Biomes": [
+                "minecraft:warm_ocean",
+                "minecraft:lukewarm_ocean",
+                "minecraft:deep_lukewarm_ocean",
+                "minecraft:ocean",
+                "minecraft:deep_ocean",
+                "minecraft:cold_ocean",
+                "minecraft:deep_cold_ocean"
+            ],
+            "Pixel": "#71A74D"
+        },
+        ["minecraft:frozen_ocean", "#60A17B"],
+        ["minecraft:deep_frozen_ocean", "#71A74D"],
+
+        {
+            "Biomes": [
+                "minecraft:deep_dark",
+                "minecraft:dripstone_caves"
+            ],
+            "Pixel": "#77AB2F"
+        },
+        ["minecraft:lush_caves", "#71A74D"],
+
+        ["minecraft:the_void", "#71A74D"],
+
+        {
+            "Biomes": [
+                "minecraft:nether_wastes",
+                "minecraft:soul_sand_valley",
+                "minecraft:crimson_forest",
+                "minecraft:warped_forest",
+                "minecraft:basalt_deltas"
+            ],
+            "Pixel": "#AEA42A"
+        },
+
+        {
+            "Biomes": [
+                "minecraft:the_end",
+                "minecraft:small_end_islands",
+                "minecraft:end_midlands",
+                "minecraft:end_highlands",
+                "minecraft:end_barrens"
+            ],
+            "Pixel": "#71A74D"
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "Name": "Default",
+    "Id": "default",
+    "OrderedIndex": 0,
+    "AllowedDimensions": "dimension != *",
+    "AutomaticallyDisableNight": false,
+    "DisableDatapackStyle": false
+}

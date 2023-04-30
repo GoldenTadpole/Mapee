@@ -1,0 +1,25 @@
+{
+    "Default": {
+        "Type": "SetY",
+        "SetY": 319,
+        "Heightmap": "OCEAN_FLOOR"
+    },
+    "Dimensions": [
+        {
+            "Dimension": "minecraft:overworld",
+            "Settings": {
+                "Type": "Heightmap",
+                "SetY": 319,
+                "Heightmap": "OCEAN_FLOOR"
+            }
+        },
+        {
+            "Dimension": "minecraft:nether",
+            "Settings": {
+                "Type": "SetY",
+                "SetY": 80,
+                "Heightmap": "OCEAN_FLOOR"
+            }
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+[
+  [["minecraft:brain_coral_fan", [["facing", "north"]]], ["minecraft:brain_coral_wall_fan", [["facing", "north"], ["waterlogged", "true"]]]], 
+  [["minecraft:brain_coral_fan", [["facing", "south"]]], ["minecraft:brain_coral_wall_fan", [["facing", "south"], ["waterlogged", "true"]]]], 
+  [["minecraft:brain_coral_fan", [["facing", "west"]]], ["minecraft:brain_coral_wall_fan", [["facing", "west"], ["waterlogged", "true"]]]], 
+  [["minecraft:brain_coral_fan", [["facing", "east"]]], ["minecraft:brain_coral_wall_fan", [["facing", "east"], ["waterlogged", "true"]]]], 
+  [["minecraft:bubble_coral_fan", [["facing", "north"]]], ["minecraft:bubble_coral_wall_fan", [["facing", "north"], ["waterlogged", "true"]]]], 
+  [["minecraft:bubble_coral_fan", [["facing", "south"]]], ["minecraft:bubble_coral_wall_fan", [["facing", "south"], ["waterlogged", "true"]]]], 
+  [["minecraft:bubble_coral_fan", [["facing", "west"]]], ["minecraft:bubble_coral_wall_fan", [["facing", "west"], ["waterlogged", "true"]]]], 
+  [["minecraft:bubble_coral_fan", [["facing", "east"]]], ["minecraft:bubble_coral_wall_fan", [["facing", "east"], ["waterlogged", "true"]]]], 
+  [["minecraft:fire_coral_fan", [["facing", "north"]]], ["minecraft:fire_coral_wall_fan", [["facing", "north"], ["waterlogged", "true"]]]], 
+  [["minecraft:fire_coral_fan", [["facing", "south"]]], ["minecraft:fire_coral_wall_fan", [["facing", "south"], ["waterlogged", "true"]]]], 
+  [["minecraft:fire_coral_fan", [["facing", "west"]]], ["minecraft:fire_coral_wall_fan", [["facing", "west"], ["waterlogged", "true"]]]], 
+  [["minecraft:fire_coral_fan", [["facing", "east"]]], ["minecraft:fire_coral_wall_fan", [["facing", "east"], ["waterlogged", "true"]]]], 
+  [["minecraft:horn_coral_fan", [["facing", "north"]]], ["minecraft:horn_coral_wall_fan", [["facing", "north"], ["waterlogged", "true"]]]], 
+  [["minecraft:horn_coral_fan", [["facing", "south"]]], ["minecraft:horn_coral_wall_fan", [["facing", "south"], ["waterlogged", "true"]]]], 
+  [["minecraft:horn_coral_fan", [["facing", "west"]]], ["minecraft:horn_coral_wall_fan", [["facing", "west"], ["waterlogged", "true"]]]], 
+  [["minecraft:horn_coral_fan", [["facing", "east"]]], ["minecraft:horn_coral_wall_fan", [["facing", "east"], ["waterlogged", "true"]]]], 
+  [["minecraft:tube_coral_fan", [["facing", "north"]]], ["minecraft:tube_coral_wall_fan", [["facing", "north"], ["waterlogged", "true"]]]], 
+  [["minecraft:tube_coral_fan", [["facing", "south"]]], ["minecraft:tube_coral_wall_fan", [["facing", "south"], ["waterlogged", "true"]]]], 
+  [["minecraft:tube_coral_fan", [["facing", "west"]]], ["minecraft:tube_coral_wall_fan", [["facing", "west"], ["waterlogged", "true"]]]], 
+  [["minecraft:tube_coral_fan", [["facing", "east"]]], ["minecraft:tube_coral_wall_fan", [["facing", "east"], ["waterlogged", "true"]]]]
+]

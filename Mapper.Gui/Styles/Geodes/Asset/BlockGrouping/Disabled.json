@@ -1,0 +1,9 @@
+[
+    {"DefaultPayload": "Disabled"},
+
+    ["minecraft:air", {"BlockType": "SemiTransparent"}],
+    ["minecraft:cave_air", {"BlockType": "SemiTransparent"}],
+    "minecraft:void_air",
+    "minecraft:light",
+    "minecraft:barrier"
+]

@@ -1,0 +1,24 @@
+﻿{
+    "Header": {
+        "PayloadName": "Elevation"
+    },
+
+    "Blocks": [
+        "minecraft:grass_block",
+        "minecraft:grass",
+        "minecraft:tall_grass",
+        "minecraft:fern",
+        "minecraft:large_fern"
+    ],
+
+    "Biomes": [
+      ["minecraft:meadow", {"Y": 80, "Min": -4, "MinIncr": 0.008, "Max": 42, "MaxIncr": 0.009, "MultiplyMaxIncrement": false}],
+      ["minecraft:cherry_grove", {"Y": 80, "Min": -4, "MinIncr": 0.008, "Max": 42, "MaxIncr": 0.009}],
+      ["minecraft:savanna", {"MinIncr": 0.01, "MaxIncr": 0.015}],
+      ["minecraft:savanna_plateau", {"MinIncr": 0.0125, "MaxIncr": 0.015}],
+      ["minecraft:windswept_savanna", {"MinIncr": 0.0125, "MaxIncr": 0.015}],
+      ["minecraft:jungle", {"Y": 69}],
+      ["minecraft:plains", {"Y": 69}],
+      ["minecraft:sunflower_plains", {"Y": 69}]
+    ]
+}

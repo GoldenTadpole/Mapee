@@ -1,0 +1,12 @@
+﻿[
+    ["minecraft:oak_leaves", {"Y": 65, "Min": -5, "MinIncr": 0.02, "Max": 20, "MaxIncr": 0.035}],
+    ["minecraft:spruce_leaves", {"Y": 65, "Min": -5, "MinIncr": 0.02, "Max": 20, "MaxIncr": 0.035}],
+    ["minecraft:birch_leaves", {"Y": 65, "Min": -5, "MinIncr": 0.02, "Max": 20, "MaxIncr": 0.035}],
+    ["minecraft:jungle_leaves", {"Y": 65, "Min": -5, "MinIncr": 0.02, "Max": 20, "MaxIncr": 0.035}],
+    ["minecraft:acacia_leaves", {"Y": 65, "Min": -5, "MinIncr": 0.02, "Max": 20, "MaxIncr": 0.035}],
+    ["minecraft:dark_oak_leaves", {"Y": 65, "Min": -5, "MinIncr": 0.02, "Max": 20, "MaxIncr": 0.035}],
+    ["minecraft:mangrove_leaves", {"Y": 65, "Min": -5, "MinIncr": 0.02, "Max": 20, "MaxIncr": 0.035}],
+    ["minecraft:azalea_leaves", {"Y": 65, "Min": -5, "MinIncr": 0.02, "Max": 20, "MaxIncr": 0.035}],
+    ["minecraft:flowering_azalea_leaves", {"Y": 65, "Min": -5, "MinIncr": 0.02, "Max": 20, "MaxIncr": 0.035}],
+    ["minecraft:cherry_leaves", {"Y": 65, "Min": -5, "MinIncr": 0.02, "Max": 20, "MaxIncr": 0.035}]
+]
