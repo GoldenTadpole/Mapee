@@ -51,14 +51,14 @@ Stone filter
 Heightmap
 ![heightmap](https://user-images.githubusercontent.com/122542335/235532968-69cf6ef3-b69b-437c-a057-2ae0db352526.png)
 
+Cave view
+![caves](https://user-images.githubusercontent.com/122542335/235532812-e44ed561-104c-4883-aac1-cca812fd92e8.png)
+
 Granite, andesite and diorite filter
 ![igneous](https://user-images.githubusercontent.com/122542335/235532993-73f1946f-8d9d-4d55-9fb0-2d8d0e103da5.png)
 
 Gravel filter
 ![gravel only](https://user-images.githubusercontent.com/122542335/235533082-e5dd8a95-78c4-4b10-8d8d-423105dff3be.png)
-
-Cave view
-![caves](https://user-images.githubusercontent.com/122542335/235532812-e44ed561-104c-4883-aac1-cca812fd92e8.png)
 
 Nether
 ![nether](https://user-images.githubusercontent.com/122542335/235532849-36d3d858-ca3e-4c07-bf57-ea53ed02f2fd.png)
