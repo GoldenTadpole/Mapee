@@ -33,3 +33,15 @@ Heightmap
 
 Alpha
 ![8](https://user-images.githubusercontent.com/122542335/235355416-c25f0369-f831-48b1-b2ec-8cbfec8f124b.png)
+
+# Sample render images
+
+Y = 70
+![y=70](https://user-images.githubusercontent.com/122542335/235524227-ce732b4b-7ae9-40d4-ac24-d1f175415a89.png)
+
+'Default' style
+![default](https://user-images.githubusercontent.com/122542335/235524257-3fd7ddad-aa21-4575-833d-0342a1391696.png)
+
+Stone filter
+![stone only](https://user-images.githubusercontent.com/122542335/235524297-b57f98d0-97ef-4590-86eb-44fb0ffaf7b0.png)
+
