@@ -1,6 +1,6 @@
 # Mapee
 
-A simple, yet powerful Minecraft mapper & filter.<br> Can load worlds from 1.3 Beta to the newest release.
+A simple, yet powerful Minecraft mapper & filter. Can load worlds from 1.3 Beta to the newest release.<br>
 Website: [mapee.net](https://www.mapee.net/home)
 
 [Newest release](https://github.com/GoldenTadpole/Mapee/releases/tag/1.0.0)
