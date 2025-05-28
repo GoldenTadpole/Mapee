@@ -5,6 +5,20 @@ Website: [mapee.net](https://www.mapee.net/home)
 
 [Newest release](https://github.com/GoldenTadpole/Mapee/releases/tag/1.0.0)
 
+# What's New?
+**Version 2.0.0 (Coming October 2025)**
+- **Cross-platform support**: Linux and macOS versions (currently Windows-only)
+- **Extended world compatibility**: 
+  - Java Alpha worlds support
+  - Current Minecraft Bedrock Edition support
+- **Command-line interface**: New CLI version for automation and scripting
+- **Significant visual improvements**: Shadows, biome blending, relief shading, and more
+- Development in progress - stay tuned for updates!
+
+**Current Version (1.0.0)**
+- Supports Minecraft Java worlds from 1.3 Beta to latest release
+- Windows-only GUI application
+
 # Sample gui images
 
 Default style
