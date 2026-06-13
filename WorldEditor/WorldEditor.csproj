@@ -37,12 +37,6 @@
     <ProjectReference Include="..\NbtEditor\NbtEditor.csproj" />
   </ItemGroup>
 
-<ItemGroup>
-    <Content Include="Translators\**">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-</ItemGroup>
-
   <ItemGroup>
     <Reference Include="zlibnet">
       <HintPath>..\Assemblies\zlibnet.dll</HintPath>

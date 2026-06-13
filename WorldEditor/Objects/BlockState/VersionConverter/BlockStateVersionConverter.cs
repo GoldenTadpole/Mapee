@@ -9,13 +9,13 @@
             {
                 From = new VersionRange(Version.Post_1_1, Version.Snapshot_17w46a),
                 To = new VersionRange(Version.Snapshot_17w47a, Version.Snapshot_18w10a),
-                IdTranslator = IdTranslator.FromFile($"Translators\\Block\\IdTranslator\\{Version.Snapshot_17w47a}.json")
+                IdTranslator = IdTranslator.FromFile($"Resources\\WorldEditor\\Translators\\Block\\IdTranslator\\{Version.Snapshot_17w47a}.json")
             });
             Converters.Add(new AnvilBlockStateInstanceConverter()
             {
                 From = new VersionRange(Version.Post_1_1, Version.Snapshot_17w46a),
                 To = new VersionRange(Version.Snapshot_17w47a, Version.Rel_1_13),
-                IdTranslator = IdTranslator.FromFile($"Translators\\Block\\IdTranslator\\{Version.Rel_1_13}.json")
+                IdTranslator = IdTranslator.FromFile($"Resources\\WorldEditor\\Translators\\Block\\IdTranslator\\{Version.Rel_1_13}.json")
             });
 
             Release[] releases = new Release[] {
@@ -37,7 +37,7 @@
                 };
             };
 
-            LoadVersionConverters("Translators\\Block\\NamespaceRenamer", releases, Version.Rel_1_13, Version.Snapshot_17w47a, converterCreator);
+            LoadVersionConverters("Resources\\WorldEditor\\Translators\\Block\\NamespaceRenamer", releases, Version.Rel_1_13, Version.Snapshot_17w47a, converterCreator);
         }
     }
 }

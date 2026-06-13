@@ -149,9 +149,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Styles\**">
+    <None Include="..\Resources\**\*.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+      <Link>Resources\%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </None>
   </ItemGroup>
 
   <ItemGroup>

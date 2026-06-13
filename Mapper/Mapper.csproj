@@ -34,32 +34,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="DefaultAsset\**" />
-    <Compile Remove="Textured\**" />
-    <EmbeddedResource Remove="DefaultAsset\**" />
-    <EmbeddedResource Remove="Textured\**" />
-    <None Remove="DefaultAsset\**" />
-    <None Remove="Textured\**" />
-    <Page Remove="DefaultAsset\**" />
-    <Page Remove="Textured\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\AssetSystem\AssetSystem.csproj" />
     <ProjectReference Include="..\CommonUtilities\CommonUtilities.csproj" />
     <ProjectReference Include="..\MapScanner\MapScanner.csproj" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="DefaultAsset\**">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Textured\**">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-</ItemGroup>
 
 </Project>
