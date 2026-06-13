@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.4.33403.182
+# Visual Studio Version 18
+VisualStudioVersion = 18.4.11626.88 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetSystem", "AssetSystem\AssetSystem.csproj", "{378CDA3D-23DD-4578-A10A-426051FF206A}"
 EndProject
@@ -20,11 +20,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MapScanner", "MapScanner\MapScanner.csproj", "{F5C10224-3243-4FA5-9C99-1935DA87047D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldEditor", "WorldEditor\WorldEditor.csproj", "{0D2743E5-BD2D-4F57-95A7-03B7E3ADDBED}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assemblies", "Assemblies", "{3A1B7AB7-4C05-4674-BFB2-F37E50C861AC}"
-	ProjectSection(SolutionItems) = preProject
-		Assemblies\zlibnet.dll = Assemblies\zlibnet.dll
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mapper.Gui", "Mapper.Gui\Mapper.Gui.csproj", "{F9A58F05-99FA-4D08-9948-866EC134A926}"
 EndProject
