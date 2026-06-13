@@ -156,6 +156,8 @@
                 "minecraft:end_barrens"
             ],
             "Color": "#3F76E4"
-        }
+        },
+
+        ["minecraft:pale_garden", "#76889D"]
     ]
 }

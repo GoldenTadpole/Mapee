@@ -6,12 +6,13 @@
 
     "Blocks": [
         "minecraft:grass_block",
-        "minecraft:grass",
+        "minecraft:short_grass",
         "minecraft:tall_grass",
         "minecraft:fern",
         "minecraft:large_fern",
         "minecraft:potted_fern",
-        "minecraft:sugar_cane"
+        "minecraft:sugar_cane",
+        "minecraft:bush"
     ],
 
     "Biomes": [

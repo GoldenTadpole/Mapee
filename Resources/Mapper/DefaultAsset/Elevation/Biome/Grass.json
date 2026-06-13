@@ -5,10 +5,11 @@
 
     "Blocks": [
         "minecraft:grass_block",
-        "minecraft:grass",
+        "minecraft:short_grass",
         "minecraft:tall_grass",
         "minecraft:fern",
-        "minecraft:large_fern"
+        "minecraft:large_fern",
+        "minecraft:bush"
     ],
 
     "Biomes": [

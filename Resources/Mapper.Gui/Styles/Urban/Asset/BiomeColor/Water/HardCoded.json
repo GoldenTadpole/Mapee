@@ -27,6 +27,8 @@
         ["minecraft:deep_warm_ocean", "#2D535F"],
 
         ["minecraft:swamp", "#2A4C2B"],
-        ["minecraft:mangrove_swamp", "#3E4C2B"]
+        ["minecraft:mangrove_swamp", "#3E4C2B"],
+
+        ["minecraft:pale_garden", "#878D76"]
     ]
 }
