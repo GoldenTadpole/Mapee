@@ -8,6 +8,7 @@
         Post_1_1 = -100,
         Post_Beta_1_3 = -200,
         Pre_Beta_1_2 = -300,
+        Snapshot_26_1_6 = 4774,
         Snapshot_23w17a = 3452,
         Snapshot_23w16a = 3449,
         Snapshot_23w14a = 3445,

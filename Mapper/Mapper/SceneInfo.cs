@@ -22,19 +22,26 @@ namespace Mapper
 
         public string? GetRegionFolder()
         {
-            if (Dimension.Namespace.StartsWith("minecraft")) 
-            {
-                if (Dimension == Dimension.Overworld) return "region";
-                if (Dimension == Dimension.Nether) return "DIM-1\\region";
-                if (Dimension == Dimension.TheEnd) return "DIM1\\region";
-                return "region";
-            }
-
             string[] split = Dimension.Namespace.Split(':');
             string @namespace = split[0];
             string name = split[1];
 
-            return $"dimensions\\{@namespace}\\{name}\\region";
+            if (Level.Version.Version >= WorldEditor.Version.Snapshot_26_1_6)
+            {
+                return $"dimensions\\{@namespace}\\{name}\\region";
+            }
+            else 
+            {
+                if (Dimension.Namespace.StartsWith("minecraft"))
+                {
+                    if (Dimension == Dimension.Overworld) return "region";
+                    if (Dimension == Dimension.Nether) return "DIM-1\\region";
+                    if (Dimension == Dimension.TheEnd) return "DIM1\\region";
+                    return "region";
+                }
+
+                return $"dimensions\\{@namespace}\\{name}\\region";
+            }
         }
         private static IEnumerable<string> GetFiles(string directory)
         {
