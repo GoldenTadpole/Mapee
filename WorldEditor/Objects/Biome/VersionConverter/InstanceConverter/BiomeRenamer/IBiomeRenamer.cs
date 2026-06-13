@@ -2,6 +2,6 @@
 {
     public interface IBiomeRenamer
     {
-        string Rename(string biome);
+        string Rename(string biome, Version to);
     }
 }

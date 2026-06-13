@@ -8,18 +8,23 @@ namespace WorldEditor
         {
             BiomeIdTranslator output = new();
 
-            JsonArray? array = JsonNode.Parse(input)?.AsArray();
-            if (array is null) return output;
+            JsonArray? jsonArray = JsonNode.Parse(input)?.AsArray();
+            if (jsonArray == null) return output;
 
-            foreach (JsonArray? entry in array.Cast<JsonArray?>())
+            foreach (JsonNode? node in jsonArray)
             {
-                if (entry is null || entry is not JsonArray arrayEntry) continue;
+                if (node == null) continue;
 
-                int? key = arrayEntry[0]?.AsValue().GetValue<int>();
-                string? value = arrayEntry[1]?.AsValue().GetValue<string>();
-                if (key is null || value is null) continue;
+                JsonObject? obj = node.AsObject();
+                if (obj == null) continue;
 
-                output.IDs.Add(key.Value, value);
+                int? id = obj["Id"]?.GetValue<int>();
+                string? biome = obj["Biome"]?.GetValue<string>();
+
+                if (id.HasValue && !string.IsNullOrEmpty(biome))
+                {
+                    output.IDs[id.Value] = biome;
+                }
             }
 
             return output;

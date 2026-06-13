@@ -8,21 +8,39 @@ namespace WorldEditor
         {
             BiomeRenamer output = new();
 
-            JsonArray? array = JsonNode.Parse(input)?.AsArray();
-            if (array is null) return output;
+            JsonArray? jsonArray = JsonNode.Parse(input)?.AsArray();
+            if (jsonArray is null) return output;
 
-            foreach (JsonArray? entry in array.Cast<JsonArray?>())
+            foreach (JsonNode? timelineNode in jsonArray)
             {
-                if (entry is null || entry is not JsonArray arrayEntry) continue;
+                if (timelineNode is not JsonArray timelineArray) continue;
 
-                string? key = arrayEntry[0]?.AsValue().GetValue<string>();
-                string? value = arrayEntry[1]?.AsValue().GetValue<string>();
-                if (key is null || value is null) continue;
+                BiomeTimeline timeline = ParseTimeline(timelineArray);
+                if (timeline.Biomes.Count == 0) continue;
 
-                output.Biomes.Add(key, value);
+                output.AddTimeline(timeline);
             }
 
             return output;
+        }
+
+        private static BiomeTimeline ParseTimeline(JsonArray timelineArray)
+        {
+            BiomeTimeline timeline = new();
+
+            foreach (JsonNode? biomeNode in timelineArray)
+            {
+                if (biomeNode is not JsonObject biomeObj) continue;
+
+                int? dataVersion = biomeObj["DataVersion"]?.GetValue<int>();
+                string? biomeName = biomeObj["Biome"]?.GetValue<string>();
+
+                if (dataVersion is null || string.IsNullOrEmpty(biomeName)) continue;
+
+                timeline.Biomes.Add(((Version)dataVersion.Value, biomeName));
+            }
+
+            return timeline;
         }
     }
 }

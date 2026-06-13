@@ -15,7 +15,7 @@
             {
                 for (int i = 0; i < section.Palette.Length; i++)
                 {
-                    if (Renamer.Rename(section.Palette[i], out Block renamedBlock))
+                    if (Renamer.Rename(section.Palette[i], To.End, out Block renamedBlock))
                     {
                         section.Palette[i] = renamedBlock;
                     }
