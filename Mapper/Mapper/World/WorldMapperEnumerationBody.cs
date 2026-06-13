@@ -1,6 +1,5 @@
 ﻿using MapScanner;
 using System.Collections.Concurrent;
-using System.IO;
 using WorldEditor;
 
 namespace Mapper
@@ -56,12 +55,11 @@ namespace Mapper
             _stepProvider.Clear();
         }
 
-        public void BeginReadingRegion(int index, string regionName)
+        public void BeginReadingRegion(int index, Coords regionCoords)
         {
-            Parser.ParseRegionName(Path.GetFileName(regionName), out int x, out int z);
-            _savedRegions[index] = new ScannedRegion(new Coords(x, z));
+            _savedRegions[index] = new ScannedRegion(regionCoords);
         }
-        public void EndReadingRegion(int index, string regionName)
+        public void EndReadingRegion(int index, Coords regionCoords)
         {
             ScannedRegion? region = _savedRegions[index];
             if(region is not null) _finishedRegions.Add(region);

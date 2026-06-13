@@ -29,6 +29,43 @@ namespace WorldEditor
                 return false;
             }
         }
+
+        public static bool TryParseChunkName(string filename, out int x, out int z)
+        {
+            try
+            {
+                if (!filename.StartsWith("c.") || !filename.EndsWith(".dat"))
+                {
+                    x = 0;
+                    z = 0;
+                    return false;
+                }
+
+                string inner = filename[2..^4];
+                int dotIndex = inner.IndexOf('.');
+
+                if (dotIndex < 0)
+                {
+                    x = 0;
+                    z = 0;
+                    return false;
+                }
+
+                string xPart = inner[..dotIndex];
+                string zPart = inner[(dotIndex + 1)..];
+
+                x = (int)Base36Decoder.Decode(xPart);
+                z = (int)Base36Decoder.Decode(zPart);
+                return true;
+            }
+            catch(Exception e)
+            {
+                x = 0;
+                z = 0;
+                return false;
+            }
+        }
+
         public static int ParseInt24(byte[] bytes, int offset)
         {
             return bytes[offset] << 16 | bytes[offset + 1] << 8 | bytes[offset + 2];

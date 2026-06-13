@@ -179,29 +179,31 @@ namespace Mapper.Gui.Logic
 
             WorldMapper.Invoke(() => 
             {
-                string[] queue = ArrayPool<string>.Shared.Rent((int)range.Size.X * (int)range.Size.Z);
-                Memory<string> queueMemory = queue;
+                Coords[] queue = ArrayPool<Coords>.Shared.Rent((int)range.Size.X * (int)range.Size.Z);
+                Memory<Coords> queueMemory = queue;
                 CreateQueue(range, ref queueMemory);
 
                 WorldMapper.Queue.ReplaceWith(queueMemory);
-                ArrayPool<string>.Shared.Return(queue);
+                ArrayPool<Coords>.Shared.Return(queue);
             });
 
             if (_currentScene is not null) _currentScene.PrevRange = range;
         }
-        private void CreateQueue(XzRange range, ref Memory<string> queue) 
+        private void CreateQueue(XzRange range, ref Memory<Coords> queue) 
         {
             if (Scene.Domain.CurrentWorld is null) return;
             IRenderedScene renderedScene = Scene.Domain.CurrentWorld.CurrentDimension.Scene;
 
             int index = 0;
-            Span<string> queueSpan = queue.Span;
+            Span<Coords> queueSpan = queue.Span;
             foreach (XzPoint regionPoint in LoadPattern.CreatePattern(range)) 
             {
-                if (!renderedScene.SceneParameter.RegionFiles.TryGetValue(regionPoint.ToCoords(), out RegionFile regionFile)) continue;
-                if (renderedScene.RenderedRegions.ContainsKey(regionPoint)) continue;
+                if (!renderedScene.SceneParameter.RegionStore.Exists(regionPoint.ToCoords())) 
+                {
+                    continue;
+                }
 
-                queueSpan[index++] = regionFile.FileName;
+                queueSpan[index++] = regionPoint.ToCoords();
             }
 
             queue = queue[..index];

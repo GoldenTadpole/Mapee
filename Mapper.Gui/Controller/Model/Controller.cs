@@ -1,6 +1,7 @@
 ﻿using Mapper.Gui.Logic;
 using System.Windows;
 using System.Windows.Controls;
+using WorldEditor;
 
 namespace Mapper.Gui.Controller
 {
@@ -45,6 +46,7 @@ namespace Mapper.Gui.Controller
             ImplementedRenderer.AddPainter(TextPainter);
 
             ImplementedScene.WorldBeginChange += Scene_WorldBeginChange;
+            ImplementedScene.WorldChanged += Scene_WorldChanged;
             ImplementedScene.DimensionBeginChange += Scene_DimensionBeginChange;
             ImplementedScene.StyleBeginReset += Scene_StyleReset;
         }
@@ -137,6 +139,14 @@ namespace Mapper.Gui.Controller
 
             CheckDimensionIsEmpty(current.CurrentDimension);
         }
+        private void Scene_WorldChanged(WorldDomain? old, WorldDomain current)
+        {
+            if (current.Level.Version.Version == Version.Pre_Beta_1_2)
+            {
+                StylebarWidget?.SelectedStyleId = "alpha";
+            }
+        }
+
         private void Scene_DimensionBeginChange(DimensionDomain old, DimensionDomain current) 
         {
             CheckDimensionIsEmpty(current);
@@ -156,10 +166,16 @@ namespace Mapper.Gui.Controller
             }
 
             IText? text = null;
-            int count = current.Scene.SceneParameter.RegionFiles.Count;
-            if (count < 1) 
+            int count = current.Scene.SceneParameter.RegionStore.Count;
+            if (count < 1)
             {
                 text = new Text($"{current.Dimension.Name} dimension is empty");
+            }
+            else if (current.Dimension == Dimension.Overworld &&
+                current.Scene.RenderedRegions.Count == 0 &&
+                current.Scene.SceneParameter.Level.Version.Version == Version.Pre_Beta_1_2)
+            {
+                text = new Text("Loading Alpha chunks. This may take a moment");
             }
 
             TextPainter.SetText(text);

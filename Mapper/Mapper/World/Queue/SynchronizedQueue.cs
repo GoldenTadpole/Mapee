@@ -1,18 +1,20 @@
 ﻿using CommonUtilities.Collections.Simple;
 using CommonUtilities.Collections.Synchronized;
+using System.Collections.ObjectModel;
+using WorldEditor;
 
 namespace Mapper
 {
-    public class SynchronizedQueue : IQueue<string>
+    public class SynchronizedQueue : IQueue<Coords>
     {
-        private IList<string> _queue = new SynchronizedList<string>(new SimpleList<string>(10));
-        private ISet<string> _fastLookupSet = new SynchronizedSet<string>(10);
+        private readonly IList<Coords> _queue = new SynchronizedList<Coords>(new SimpleList<Coords>(10));
+        private readonly ISet<Coords> _fastLookupSet = new SynchronizedSet<Coords>(10);
 
         public int Count => _queue.Count;
 
-        public string[] TakeFirst(int count)
+        public Coords[] TakeFirst(int count)
         {
-            string[] output = new string[count > _queue.Count ? _queue.Count : count];
+            Coords[] output = new Coords[count > _queue.Count ? _queue.Count : count];
             for (int i = 0; i < output.Length; i++)
             {
                 output[i] = _queue[i];
@@ -33,15 +35,14 @@ namespace Mapper
                 _queue.RemoveAt(0);
             }
         }
-        public void ReplaceWith(ReadOnlyMemory<string> items)
+        public void ReplaceWith(ReadOnlyMemory<Coords> items)
         {
             _queue.Clear();
             _fastLookupSet.Clear();
 
-            ReadOnlySpan<string> span = items.Span;
+            ReadOnlySpan<Coords> span = items.Span;
             for (int i = 0; i < items.Length; i++)
             {
-                if (string.IsNullOrEmpty(span[i])) continue;
                 _queue.Add(span[i]);
             }
 

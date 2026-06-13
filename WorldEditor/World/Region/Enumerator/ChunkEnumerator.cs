@@ -5,12 +5,14 @@ namespace WorldEditor
     public class ChunkEnumerator : IChunkEnumerator
     {
         public int RegionsPerTask { get; }
+        public Func<IRegionStore> RegionStoreProvider { get; }
 
         private IChunkEnumeratorFromRegion[] _enumerators;
 
-        public ChunkEnumerator(int regionsPerTask, int tasksPerRegion, IFactory<int, IChunkEnumeratorFromRegion> factory)
+        public ChunkEnumerator(int regionsPerTask, int tasksPerRegion, Func<IRegionStore> regionStoreProvider, IFactory<int, IChunkEnumeratorFromRegion> factory)
         {
             RegionsPerTask = regionsPerTask;
+            RegionStoreProvider = regionStoreProvider;
             _enumerators = new IChunkEnumeratorFromRegion[regionsPerTask];
 
             for (int i = 0; i < _enumerators.Length; i++)
@@ -19,7 +21,7 @@ namespace WorldEditor
             }
         }
 
-        public virtual void Enumerate(string[] regions, IEnumerationBody body)
+        public virtual void Enumerate(Coords[] regions, IEnumerationBody body)
         {
             int iterations = (int)Math.Ceiling(regions.Length / (float)RegionsPerTask);
 
@@ -34,8 +36,11 @@ namespace WorldEditor
 
                     body.BeginReadingRegion(iterator, regions[index]);
 
-                    ChunkEnumerateFromRegionArgs args = CreateArgs(regions[index], iterator);
-                    _enumerators[iterator].Enumerate(args, (r, chunk) => body.EndReadingChunk(iterator, r, chunk));
+                    ChunkEnumerateFromRegionArgs? args = CreateArgs(regions[index], iterator);
+                    if (args is not null)
+                    {
+                        _enumerators[iterator].Enumerate(args.Value, (r, chunk) => body.EndReadingChunk(iterator, r, chunk));
+                    }
 
                     body.EndReadingRegion(iterator, regions[index]);
                 });
@@ -44,19 +49,21 @@ namespace WorldEditor
             }
         }
 
-        protected virtual ChunkEnumerateFromRegionArgs CreateArgs(string region, int iterator)
+        protected virtual ChunkEnumerateFromRegionArgs? CreateArgs(Coords regionCoords, int iterator)
         {
-            byte[] buffer;
-            using (FileStream fileStream = new(region, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            IRegionStore regionStore = RegionStoreProvider();
+
+            if (!regionStore.GetData(regionCoords, out byte[]? buffer, out StorageFormat storageFormat)) 
             {
-                buffer = new byte[fileStream.Length];
-                fileStream.Read(buffer);
+                return null;
             }
 
-            Parser.ParseRegionName(Path.GetFileName(region), out int regionX, out int regionZ);
-            StorageFormat storageFormat = Parser.ParseStorageFormat(Path.GetFileName(region));
+            if (buffer is null) 
+            {
+                return null;
+            }
 
-            return new ChunkEnumerateFromRegionArgs(buffer, CreateCoords(regionX, regionZ), storageFormat);
+            return new ChunkEnumerateFromRegionArgs(buffer, CreateCoords(regionCoords.X, regionCoords.Z), storageFormat);
         }
         private static Coords[] CreateCoords(int regionX, int regionZ)
         {
