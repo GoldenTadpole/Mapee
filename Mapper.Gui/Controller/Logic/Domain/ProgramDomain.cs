@@ -21,7 +21,7 @@ namespace Mapper.Gui.Logic
         public ProgramDomain()
         {
             AssetPackFactory assetPackFactory = new();
-            DefaultAssetPack = assetPackFactory.Create(new DataReader("DefaultAsset"));
+            DefaultAssetPack = assetPackFactory.Create(new DataReader("Resources\\Mapper\\DefaultAsset"));
 
             Styles = LoadStyles();
             CurrentStyle = Styles[0];
@@ -35,8 +35,8 @@ namespace Mapper.Gui.Logic
             List<Style> styles = new List<Style>();
 
             ISet<string> entries = new HashSet<string>();
-            entries.UnionWith(Directory.GetFiles("Styles"));
-            entries.UnionWith(Directory.GetDirectories("Styles"));
+            entries.UnionWith(Directory.GetFiles("Resources\\Mapper.Gui\\Styles"));
+            entries.UnionWith(Directory.GetDirectories("Resources\\Mapper.Gui\\Styles"));
 
             StyleReader styleReader = new(DefaultAssetPack);
             foreach (string entry in entries) 
@@ -54,8 +54,8 @@ namespace Mapper.Gui.Logic
         private static TexturedAssetPack LoadTexturePack() 
         {
             Colormap colormap = new Colormap(
-                new ReadOnlyBitmap(new Uri("Textured\\colormap\\grass.png", UriKind.Relative)),
-                new ReadOnlyBitmap(new Uri("Textured\\colormap\\foliage.png", UriKind.Relative)));
+                new ReadOnlyBitmap(new Uri("Resources\\Mapper\\Textured\\colormap\\grass.png", UriKind.Relative)),
+                new ReadOnlyBitmap(new Uri("Resources\\Mapper\\\\Textured\\colormap\\foliage.png", UriKind.Relative)));
 
             return new TexturedAssetPack(new Mapper.TexturedAssetPack()
             {

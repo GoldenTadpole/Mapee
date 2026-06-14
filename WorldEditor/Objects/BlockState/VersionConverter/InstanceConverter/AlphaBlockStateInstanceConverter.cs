@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-
-namespace WorldEditor
+﻿namespace WorldEditor
 {
     public class AlphaBlockStateInstanceConverter : IInstanceConverter<IObject>
     {

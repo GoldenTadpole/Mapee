@@ -17,11 +17,8 @@ namespace WorldEditor
             if (chunkParamater.Level.TryGetValue("DataVersion", out Tag? dataversionTag))
             {
                 int dataversion = dataversionTag;
-                if (Enum.IsDefined(typeof(Version), dataversion)) return (Version)dataversion;
-                else
-                {
-                    if (dataversion > (int)Version.Newest.Prev()) return Version.Newest;
-                }
+                if (dataversion > (int)Version.Newest) return Version.Newest;
+                return (Version)dataversion;
             }
 
             return Version.Post_1_1;

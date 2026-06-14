@@ -64,10 +64,12 @@ namespace Mapper.Gui.Controller
             if (!Directory.Exists(directory)) return;
 
             string[] namespaces = Directory.GetDirectories(directory);
-            foreach (string @namespace in namespaces) 
+            foreach (string @namespace in namespaces)
             {
+                if (Path.GetFileName(@namespace) == "minecraft") continue;
+
                 string[] dimensions = Directory.GetDirectories(@namespace);
-                foreach (string dimension in dimensions) 
+                foreach (string dimension in dimensions)
                 {
                     ExtraDimensionsWriteable.Add(new Dimension($"{Path.GetFileName(@namespace)}:{Path.GetFileName(dimension)}"));
                 }

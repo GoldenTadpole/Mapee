@@ -8,67 +8,74 @@ namespace WorldEditor
         {
             BlockRenamer output = new();
 
-            JsonArray? array = JsonNode.Parse(jsonString)?.AsArray();
-            if (array is null) return output;
+            JsonArray? jsonArray = JsonNode.Parse(jsonString)?.AsArray();
+            if (jsonArray is null) return output;
 
-            foreach (JsonNode? entry in array)
+            foreach (JsonNode? timelineNode in jsonArray)
             {
-                if (entry is not JsonArray blockEntry) continue;
+                if (timelineNode is not JsonArray timelineArray) continue;
 
-                JsonArray? oldBlockArray = blockEntry[0]?.AsArray();
-                if (oldBlockArray is null) continue;
+                BlockTimeline timeline = ParseTimeline(timelineArray);
+                if (timeline.Blocks.Count == 0) continue;
 
-                JsonArray? newBlockArray = blockEntry[1]?.AsArray();
-                if (newBlockArray is null) continue;
-
-                Block? oldBlock = ReadBlock(oldBlockArray);
-                Block? newBlock = ReadBlock(newBlockArray);
-
-                if(oldBlock is null || newBlock is null) continue;
-
-                if (!output.Blocks.TryGetValue(oldBlock.Value.Name, out RenamedBlock? renamedBlock))
-                {
-                    renamedBlock = new RenamedBlock(oldBlock.Value.Name);
-                    output.Blocks.Add(renamedBlock.OldNamespace, renamedBlock);
-                }
-
-                renamedBlock.OldBlocks.Add(oldBlock.Value);
-                renamedBlock.NewBlocks.Add(newBlock.Value);
+                output.AddTimeline(timeline);
             }
 
             return output;
         }
 
-        private static Block? ReadBlock(JsonArray array)
+        private static BlockTimeline ParseTimeline(JsonArray timelineArray)
         {
-            JsonArray? propertiesArray = array[1]?.AsArray();
-            if(propertiesArray is null) return null;
+            BlockTimeline timeline = new();
 
-            Property[] properties = new Property[propertiesArray.Count];
-            for (int i = 0; i < properties.Length; i++)
+            foreach (JsonNode? blockNode in timelineArray)
             {
-                if (propertiesArray[i] is not JsonArray propertyArray) continue;
+                if (blockNode is not JsonObject blockObj) continue;
 
-                Property? property = ReadProperty(propertyArray);
-                if (property is null) continue;
+                int? dataVersion = blockObj["DataVersion"]?.GetValue<int>();
+                string? blockString = blockObj["Block"]?.GetValue<string>();
 
-                properties[i] = property.Value;
+                if (dataVersion is null || blockString is null) continue;
+
+                Block block = ParseBlock(blockString);
+                if (block.IsEmpty()) continue;
+
+                timeline.Blocks.Add(((Version)dataVersion.Value, block));
             }
 
-            string? name = array[0]?.AsValue().GetValue<string>();
-            if(name is null) return null;
-
-            return new Block(name, properties);
+            return timeline;
         }
 
-        private static Property? ReadProperty(JsonArray propertyTag)
+        private static Block ParseBlock(string blockString)
         {
-            string? name = propertyTag[0]?.AsValue().GetValue<string>();
-            string? value = propertyTag[1]?.AsValue().GetValue<string>();
+            if (string.IsNullOrEmpty(blockString)) return Block.Empty;
 
-            if (name is null || value is null) return null;
+            string[] parts = blockString.Split(' ', 2);
+            string name = parts[0];
 
-            return new Property(name, value);
+            if (parts.Length == 1)
+            {
+                return new Block(name);
+            }
+
+            string[] propertyPairs = parts[1].Split(';');
+            List<Property> properties = new(propertyPairs.Length);
+
+            foreach (string pair in propertyPairs)
+            {
+                string[] keyValue = pair.Split('=', 2);
+                if (keyValue.Length != 2 || string.IsNullOrEmpty(keyValue[0]) || string.IsNullOrEmpty(keyValue[1]))
+                {
+                    continue;
+                }
+
+                properties.Add(new Property(keyValue[0], keyValue[1]));
+            }
+
+            Property[] sortedProperties = properties.ToArray();
+            Array.Sort(sortedProperties, (a, b) => string.CompareOrdinal(a.Name, b.Name));
+
+            return new Block(name, sortedProperties);
         }
     }
 }

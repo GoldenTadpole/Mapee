@@ -18,7 +18,7 @@
             {
                 for (int i = 0; i < section.Palette.Length; i++)
                 {
-                    section.Palette[i] = Renamer.Rename(section.Palette[i]);
+                    section.Palette[i] = Renamer.Rename(section.Palette[i], To.End);
                 }
 
                 section.Locker = new BiomeLocker(section)

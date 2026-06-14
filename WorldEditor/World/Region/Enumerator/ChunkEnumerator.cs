@@ -5,22 +5,33 @@ namespace WorldEditor
     public class ChunkEnumerator : IChunkEnumerator
     {
         public int RegionsPerTask { get; }
+        public Func<IRegionStore> RegionStoreProvider { get; }
 
         private IChunkEnumeratorFromRegion[] _enumerators;
 
-        public ChunkEnumerator(int regionsPerTask, int tasksPerRegion, IFactory<int, IChunkEnumeratorFromRegion> factory)
+        public ChunkEnumerator(int regionsPerTask, int tasksPerRegion, Func<IRegionStore> regionStoreProvider, IFactory<int, IChunkEnumeratorFromRegion> factory)
         {
+            if (regionsPerTask <= 0) throw new ArgumentOutOfRangeException(nameof(regionsPerTask));
+            if (regionStoreProvider is null) throw new ArgumentNullException(nameof(regionStoreProvider));
+            if (factory is null) throw new ArgumentNullException(nameof(factory));
+
             RegionsPerTask = regionsPerTask;
+            RegionStoreProvider = regionStoreProvider;
             _enumerators = new IChunkEnumeratorFromRegion[regionsPerTask];
 
             for (int i = 0; i < _enumerators.Length; i++)
             {
-                _enumerators[i] = factory.Create(tasksPerRegion);
+                var enumerator = factory.Create(tasksPerRegion) ?? throw new InvalidOperationException("Factory.Create returned null for IChunkEnumeratorFromRegion");
+                _enumerators[i] = enumerator;
             }
         }
 
-        public virtual void Enumerate(string[] regions, IEnumerationBody body)
+        public virtual void Enumerate(Coords[] regions, IEnumerationBody body)
         {
+            if (regions is null) throw new ArgumentNullException(nameof(regions));
+            if (body is null) throw new ArgumentNullException(nameof(body));
+            if (RegionsPerTask <= 0) return;
+
             int iterations = (int)Math.Ceiling(regions.Length / (float)RegionsPerTask);
 
             for (int i = 0; i < iterations; i++)
@@ -34,8 +45,15 @@ namespace WorldEditor
 
                     body.BeginReadingRegion(iterator, regions[index]);
 
-                    ChunkEnumerateFromRegionArgs args = CreateArgs(regions[index], iterator);
-                    _enumerators[iterator].Enumerate(args, (r, chunk) => body.EndReadingChunk(iterator, r, chunk));
+                    ChunkEnumerateFromRegionArgs? args = CreateArgs(regions[index], iterator);
+                    if (args is not null)
+                    {
+                        var enumerator = _enumerators[iterator];
+                        if (enumerator != null)
+                        {
+                            enumerator.Enumerate(args.Value, (r, chunk) => body.EndReadingChunk(iterator, r, chunk));
+                        }
+                    }
 
                     body.EndReadingRegion(iterator, regions[index]);
                 });
@@ -44,19 +62,22 @@ namespace WorldEditor
             }
         }
 
-        protected virtual ChunkEnumerateFromRegionArgs CreateArgs(string region, int iterator)
+        protected virtual ChunkEnumerateFromRegionArgs? CreateArgs(Coords regionCoords, int iterator)
         {
-            byte[] buffer;
-            using (FileStream fileStream = new(region, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            IRegionStore? regionStore = RegionStoreProvider?.Invoke();
+            if (regionStore is null) return null;
+
+            if (!regionStore.GetData(regionCoords, out byte[]? buffer, out StorageFormat storageFormat)) 
             {
-                buffer = new byte[fileStream.Length];
-                fileStream.Read(buffer);
+                return null;
             }
 
-            Parser.ParseRegionName(Path.GetFileName(region), out int regionX, out int regionZ);
-            StorageFormat storageFormat = Parser.ParseStorageFormat(Path.GetFileName(region));
+            if (buffer is null) 
+            {
+                return null;
+            }
 
-            return new ChunkEnumerateFromRegionArgs(buffer, CreateCoords(regionX, regionZ), storageFormat);
+            return new ChunkEnumerateFromRegionArgs(buffer, CreateCoords(regionCoords.X, regionCoords.Z), storageFormat);
         }
         private static Coords[] CreateCoords(int regionX, int regionZ)
         {

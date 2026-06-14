@@ -8,45 +8,57 @@ namespace WorldEditor
         {
             IdTranslator output = new();
 
-            JsonArray? array = JsonNode.Parse(jsonString)?.AsArray();
-            if (array is null) return output;
+            JsonArray? jsonArray = JsonNode.Parse(jsonString)?.AsArray();
+            if (jsonArray == null) return output;
 
-            foreach (JsonNode? block in array)
+            foreach (JsonNode? node in jsonArray)
             {
-                if (block is not JsonArray blockArray) continue;
+                if (node == null) continue;
 
-                byte? blockState = blockArray[0]?.AsValue().GetValue<byte>();
-                byte? data = blockArray[1]?.AsValue().GetValue<byte>();
-                string? name = blockArray[2]?.AsValue().GetValue<string>();
+                JsonObject? obj = node.AsObject();
+                if (obj == null) continue;
 
-                if (blockState is null || data is null || name is null) continue;
-                if (block[3] is null || block[3] is not JsonArray propertiesArray) continue;
+                byte id = (byte)(obj["Id"]?.GetValue<int>() ?? 0);
+                byte data = (byte)(obj["Data"]?.GetValue<int>() ?? 0);
+                string blockString = obj["Block"]?.GetValue<string>() ?? string.Empty;
 
-                Property[] properties = new Property[propertiesArray.Count];
-                for (int i = 0; i < propertiesArray.Count; i++)
-                {
-                    if (propertiesArray[i] is not JsonArray propertyArray) continue;
-
-                    Property? property = ReadProperty(propertyArray);
-                    if (property is null) continue;
-
-                    properties[i] = property.Value;
-                }
-
-                output.Add(blockState.Value, data.Value, new Block(name, properties));
+                Block block = ParseBlock(blockString);
+                output.Add(id, data, block);
             }
 
             return output;
         }
 
-        private static Property? ReadProperty(JsonArray propertyTag) 
+        private Block ParseBlock(string blockString)
         {
-            string? name = propertyTag[0]?.AsValue().GetValue<string>();
-            string? value = propertyTag[1]?.AsValue().GetValue<string>();
+            if (string.IsNullOrEmpty(blockString)) return Block.Empty;
 
-            if (name is null || value is null) return null;
+            string[] parts = blockString.Split(' ', 2);
+            string name = parts[0];
 
-            return new Property(name, value);
+            if (parts.Length == 1)
+            {
+                return new Block(name);
+            }
+
+            string propertiesString = parts[1];
+            string[] propertyPairs = propertiesString.Split(';');
+            Property[] properties = new Property[propertyPairs.Length];
+
+            for (int i = 0; i < propertyPairs.Length; i++)
+            {
+                string[] keyValue = propertyPairs[i].Split('=', 2);
+                if (keyValue.Length == 2)
+                {
+                    properties[i] = new Property(keyValue[0], keyValue[1]);
+                }
+                else
+                {
+                    properties[i] = new Property(keyValue[0], string.Empty);
+                }
+            }
+
+            return new Block(name, properties);
         }
     }
 }

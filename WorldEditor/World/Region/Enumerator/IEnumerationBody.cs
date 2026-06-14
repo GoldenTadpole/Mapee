@@ -5,8 +5,8 @@
         void BeginCycle();
         void EndCycle();
 
-        void BeginReadingRegion(int index, string regionName);
-        void EndReadingRegion(int index, string regionName);
+        void BeginReadingRegion(int index, Coords region);
+        void EndReadingRegion(int index, Coords region);
 
         void EndReadingChunk(int regionIndex, int chunkIndex, IChunk chunk);
     }

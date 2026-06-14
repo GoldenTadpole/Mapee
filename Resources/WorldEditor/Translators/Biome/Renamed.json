@@ -1,0 +1,158 @@
+﻿[
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:mountains"},
+        {"DataVersion": 2838, "Biome": "minecraft:windswept_hills"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:snowy_tundra"},
+        {"DataVersion": 2838, "Biome": "minecraft:snowy_plains"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:snowy_mountains"},
+        {"DataVersion": 2838, "Biome": "minecraft:snowy_plains"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:mushroom_field_shore"},
+        {"DataVersion": 2838, "Biome": "minecraft:mushroom_fields"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:desert_hills"},
+        {"DataVersion": 2838, "Biome": "minecraft:desert"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:wooded_hills"},
+        {"DataVersion": 2838, "Biome": "minecraft:forest"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:taiga_hills"},
+        {"DataVersion": 2838, "Biome": "minecraft:taiga"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:mountain_edge"},
+        {"DataVersion": 2838, "Biome": "minecraft:windswept_hills"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:jungle_hills"},
+        {"DataVersion": 2838, "Biome": "minecraft:jungle"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:jungle_edge"},
+        {"DataVersion": 2838, "Biome": "minecraft:sparse_jungle"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:stone_shore"},
+        {"DataVersion": 2838, "Biome": "minecraft:stony_shore"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:birch_forest_hills"},
+        {"DataVersion": 2838, "Biome": "minecraft:birch_forest"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:snowy_taiga_hills"},
+        {"DataVersion": 2838, "Biome": "minecraft:snowy_taiga"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:giant_tree_taiga"},
+        {"DataVersion": 2838, "Biome": "minecraft:old_growth_pine_taiga"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:giant_tree_taiga_hills"},
+        {"DataVersion": 2838, "Biome": "minecraft:old_growth_pine_taiga"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:wooded_mountains"},
+        {"DataVersion": 2838, "Biome": "minecraft:windswept_forest"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:wooded_badlands_plateau"},
+        {"DataVersion": 2838, "Biome": "minecraft:wooded_badlands"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:badlands_plateau"},
+        {"DataVersion": 2838, "Biome": "minecraft:badlands"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:deep_warm_ocean"},
+        {"DataVersion": 2838, "Biome": "minecraft:warm_ocean"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:desert_lakes"},
+        {"DataVersion": 2838, "Biome": "minecraft:desert"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:gravelly_mountains"},
+        {"DataVersion": 2838, "Biome": "minecraft:windswept_gravelly_hills"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:taiga_mountains"},
+        {"DataVersion": 2838, "Biome": "minecraft:taiga"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:swamp_hills"},
+        {"DataVersion": 2838, "Biome": "minecraft:swamp"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:modified_jungle"},
+        {"DataVersion": 2838, "Biome": "minecraft:jungle"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:modified_jungle_edge"},
+        {"DataVersion": 2838, "Biome": "minecraft:sparse_jungle"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:tall_birch_forest"},
+        {"DataVersion": 2838, "Biome": "minecraft:old_growth_birch_forest"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:tall_birch_hills"},
+        {"DataVersion": 2838, "Biome": "minecraft:old_growth_birch_forest"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:dark_forest_hills"},
+        {"DataVersion": 2838, "Biome": "minecraft:dark_forest"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:snowy_taiga_mountains"},
+        {"DataVersion": 2838, "Biome": "minecraft:snowy_taiga"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:giant_spruce_taiga"},
+        {"DataVersion": 2838, "Biome": "minecraft:old_growth_spruce_taiga"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:giant_spruce_taiga_hills"},
+        {"DataVersion": 2838, "Biome": "minecraft:old_growth_spruce_taiga"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:modified_gravelly_mountains"},
+        {"DataVersion": 2838, "Biome": "minecraft:windswept_gravelly_hills"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:shattered_savanna"},
+        {"DataVersion": 2838, "Biome": "minecraft:windswept_savanna"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:shattered_savanna_plateau"},
+        {"DataVersion": 2838, "Biome": "minecraft:windswept_savanna"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:modified_wooded_badlands_plateau"},
+        {"DataVersion": 2838, "Biome": "minecraft:wooded_badlands"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:modified_badlands_plateau"},
+        {"DataVersion": 2838, "Biome": "minecraft:badlands"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:bamboo_jungle_hills"},
+        {"DataVersion": 2838, "Biome": "minecraft:bamboo_jungle"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:snowcapped_peaks"},
+        {"DataVersion": 2838, "Biome": "minecraft:frozen_peaks"}
+    ],
+    [ 
+        {"DataVersion": -300, "Biome": "minecraft:lofty_peaks"},
+        {"DataVersion": 2838, "Biome": "minecraft:jagged_peaks"}
+    ]
+]

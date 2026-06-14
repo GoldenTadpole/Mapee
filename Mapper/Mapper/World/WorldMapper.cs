@@ -15,7 +15,7 @@ namespace Mapper
             set => EnumerationBody.RegionRendered = value;
         }
         public SceneInfo CurrentScene { get; protected set; }
-        public IQueue<string> Queue { get; }
+        public IQueue<Coords> Queue { get; }
 
         private Action? _invoke;
         private bool _newInvoke = false;
@@ -29,7 +29,7 @@ namespace Mapper
             MapperPack = mapperPack;
 
             ChunkEnumeratorFromRegionFactory factory = new(index => MapperPack.ChunkReader);
-            ChunkEnumerator = new ChunkEnumerator(REGIONS_IN_PARALLEL, CHUNKS_IN_PARALLEL, factory);
+            ChunkEnumerator = new ChunkEnumerator(REGIONS_IN_PARALLEL, CHUNKS_IN_PARALLEL, () => CurrentScene.RegionStore, factory);
 
             EnumerationBody = new WorldMapperEnumerationBody(MapperPack, REGIONS_IN_PARALLEL, CHUNKS_IN_PARALLEL);
             Queue = new SynchronizedQueue();
@@ -46,7 +46,7 @@ namespace Mapper
         }
         public void Stop()
         {
-            Queue.ReplaceWith(ReadOnlyMemory<string>.Empty);
+            Queue.ReplaceWith(ReadOnlyMemory<Coords>.Empty);
         }
 
         private void InitializeThread()

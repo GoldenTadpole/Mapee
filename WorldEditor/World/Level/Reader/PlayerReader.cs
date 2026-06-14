@@ -8,17 +8,37 @@ namespace WorldEditor
         public Player Read(LevelArgs input)
         {
             Player player = new Player();
-            if (!input.Data.TryGetChild("Player", out Tag playerTag) || playerTag is not CompoundTag playerCompound) return player;
-
-            ReadPlayerPositions(playerCompound, out Vector3 pos, out Vector3 spawn);
-
-            return new Player()
+            if (input.Data.TryGetChild("Player", out Tag playerTag) && playerTag is CompoundTag playerCompound) 
             {
-                Position = pos,
-                Spawn = spawn,
-                Dimension = ReadPlayerDimension(playerCompound),
-                GameType = ReadPlayerGameType(playerCompound)
-            };
+                ReadPlayerPositions(playerCompound, out Vector3 pos, out Vector3 spawn);
+                
+                return new Player()
+                {
+                    Position = pos,
+                    Spawn = spawn,
+                    Dimension = ReadPlayerDimension(playerCompound),
+                    GameType = ReadPlayerGameType(playerCompound)
+                };
+            }
+
+            if (input.Data.TryGetChild("spawn", out Tag spawnTag) && spawnTag is CompoundTag spawnCompound) 
+            {
+                if (spawnCompound.TryGetChild("pos", out Tag posTag) && posTag is ArrayTag posArray
+                    && posArray.InternalArary.Length == 3) 
+                {
+                    int[] posCastArray = (int[]) posArray.InternalArary;
+
+                    Vector3 pos = new Vector3(posCastArray[0], posCastArray[1], posCastArray[2]);
+                    return new Player()
+                    {
+                        Position = pos,
+                        Dimension = Dimension.Overworld,
+                        GameType = GameType.Creative
+                    };
+                }
+            }
+
+            return player;
         }
 
         private static void ReadPlayerPositions(CompoundTag player, out Vector3 pos, out Vector3 spawn)

@@ -1,0 +1,21 @@
+{
+    "Header": {
+        "PayloadName": "Pixel",
+        "Extra": {"Type": "HardCoded"}
+    },
+
+    "Blocks": [
+        "minecraft:grass_block",
+        "minecraft:short_grass",
+        "minecraft:tall_grass",
+        "minecraft:fern",
+        "minecraft:large_fern",
+        "minecraft:potted_fern",
+        "minecraft:sugar_cane",
+        "minecraft:bush"
+    ],
+
+    "Biomes": [
+        ["minecraft:dark_forest", "#4A7B30"]
+    ]
+}

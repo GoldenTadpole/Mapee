@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -35,6 +36,18 @@ namespace Mapper.Gui.Logic
 
         public void SetWorld(Level level)
         {
+            if (level.Version.Version == WorldEditor.Version.Unknown) 
+            {
+                bool hasAlphaChunks = Directory.EnumerateFiles(level.Directory ?? "", "c.*.*.dat", SearchOption.AllDirectories).Any();
+                if (hasAlphaChunks)
+                {
+                    level.Version = new LevelVersion()
+                    {
+                        Version = WorldEditor.Version.Pre_Beta_1_2
+                    };
+                }
+            }
+
             SceneInfo sceneParameter = new(level, Dimension.Overworld);
             DimensionDomain dimension = new(new RenderedScene(sceneParameter))
             {
