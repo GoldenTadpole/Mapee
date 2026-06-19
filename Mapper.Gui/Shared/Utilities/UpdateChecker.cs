@@ -8,6 +8,7 @@ namespace Mapper.Gui
 
         public static void Check() 
         {
+            AutoUpdater.ClearAppDirectory = true;
             AutoUpdater.Start(_versionInfoUrl);
         }
     }
