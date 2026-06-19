@@ -1,7 +1,10 @@
 ﻿using Mapper.Gui.Model;
 using System;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
+using System.Windows.Threading;
 
 namespace Mapper.Gui
 {
@@ -12,12 +15,21 @@ namespace Mapper.Gui
     {
 
         private readonly IImageSaver _imageSaver;
+        private readonly DispatcherTimer _savingAnimationTimer;
+        private int _savingDotCount;
+        private bool _isSaving;
 
         public SaveAsImageControl(IImageSaver imageSaver)
         {
             InitializeComponent();
 
             _imageSaver = imageSaver;
+
+            _savingAnimationTimer = new DispatcherTimer()
+            {
+                Interval = TimeSpan.FromMilliseconds(450)
+            };
+            _savingAnimationTimer.Tick += SavingAnimationTimer_Tick;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -96,8 +108,10 @@ namespace Mapper.Gui
             DescriptionLabel.Text = $"Description: {description}";
         }
 
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        private async void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            if (_isSaving) return;
+
             Microsoft.Win32.SaveFileDialog saveDialog = new()
             {
                 FileName = "RenderedMap",
@@ -109,26 +123,109 @@ namespace Mapper.Gui
             if (result == null || !result.Value) return;
 
             string path = saveDialog.FileName;
+            bool saveScreenshot = ScreenshotRadioButton.IsChecked is not null && ScreenshotRadioButton.IsChecked.Value;
+            FullResolutionImageArgs fullResolutionImageArgs = CreateFullResolutionImageArgs();
+            Exception? saveException = null;
 
-            if (ScreenshotRadioButton.IsChecked is not null && ScreenshotRadioButton.IsChecked.Value)
+            BeginSaving();
+
+            try
             {
-                SaveScreenshot(path);
+                await Dispatcher.Yield(DispatcherPriority.Background);
+
+                if (saveScreenshot)
+                {
+                    SaveScreenshot(path);
+                }
+                else
+                {
+                    await RunOnStaThreadAsync(() => SaveFullResolution(path, fullResolutionImageArgs));
+                }
             }
-            else
+            catch (Exception exception)
             {
-                SaveFullResolution(path);
+                saveException = exception;
+            }
+            finally
+            {
+                EndSaving();
+            }
+
+            if (saveException is not null)
+            {
+                MessageBox.Show(this, $"Image could not be saved.\n\n{saveException.Message}", "Save as image", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
 
             Close();
+        }
+
+        private void BeginSaving()
+        {
+            _isSaving = true;
+            _savingDotCount = 0;
+            SavingLabel.Text = "Saving";
+            SavingLabel.Visibility = Visibility.Visible;
+            SetControlsEnabled(false);
+            _savingAnimationTimer.Start();
+        }
+
+        private void EndSaving()
+        {
+            _savingAnimationTimer.Stop();
+            SavingLabel.Visibility = Visibility.Collapsed;
+            SetControlsEnabled(true);
+            _isSaving = false;
+        }
+
+        private void SavingAnimationTimer_Tick(object? sender, EventArgs e)
+        {
+            _savingDotCount = (_savingDotCount + 1) % 4;
+            SavingLabel.Text = $"Saving{new string('.', _savingDotCount)}";
+        }
+
+        private void SetControlsEnabled(bool enabled)
+        {
+            ScreenshotRadioButton.IsEnabled = enabled;
+            FullResolutionButton.IsEnabled = enabled;
+            ClipAreaCheckBox.IsEnabled = enabled;
+            CheckerPatternRadioBox.IsEnabled = enabled;
+            BlackColorRadioBox.IsEnabled = enabled;
+            InvisibleColorRadioBox.IsEnabled = enabled;
+            SaveButton.IsEnabled = enabled;
+        }
+
+        private static Task RunOnStaThreadAsync(Action action)
+        {
+            TaskCompletionSource<object?> taskCompletionSource = new(TaskCreationOptions.RunContinuationsAsynchronously);
+
+            Thread thread = new(() =>
+            {
+                try
+                {
+                    action();
+                    taskCompletionSource.SetResult(null);
+                }
+                catch (Exception exception)
+                {
+                    taskCompletionSource.SetException(exception);
+                }
+            });
+
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.IsBackground = true;
+            thread.Start();
+
+            return taskCompletionSource.Task;
         }
 
         private void SaveScreenshot(string path)
         {
             _imageSaver.SaveAsScreenshot(path);
         }
-        private void SaveFullResolution(string path)
+        private void SaveFullResolution(string path, FullResolutionImageArgs args)
         {
-            _imageSaver.SaveAsFullResolution(path, CreateFullResolutionImageArgs());
+            _imageSaver.SaveAsFullResolution(path, args);
         }
 
         private FullResolutionImageArgs CreateFullResolutionImageArgs() 

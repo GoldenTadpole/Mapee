@@ -10,6 +10,8 @@
         {
             _store.Clear();
 
+            if (!Directory.Exists(directory)) return [];
+
             string[] files = Directory.GetFiles(directory);
             foreach (var file in files)
             {

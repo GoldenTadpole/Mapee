@@ -74,31 +74,40 @@
             </Grid>
         </Border>
 
-        <Border Grid.Row="3" Margin="0, 0, 0, 13" Width="100" Height="25" BorderThickness="1" BorderBrush="#FF707070" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-            <Button Content="Save as..." Width="100" Height="25" Foreground="#FFCCCCCC" Click="SaveButton_Click">
-                <Button.Style>
-                    <Style TargetType="{x:Type Button}">
-                        <Setter Property="Background" Value="#FF353535"/>
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="{x:Type Button}">
-                                    <Border Background="{TemplateBinding Background}" >
-                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                    </Border>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#FF555555"/>
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="True">
-                                <Setter Property="Background" Value="#FF707070"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-        </Border>
+        <Grid Grid.Row="3" Margin="0, 0, 0, 13" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Border Width="100" Height="25" BorderThickness="1" BorderBrush="#FF707070" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                <Button x:Name="SaveButton" Content="Save as..." Width="100" Height="25" Foreground="#FFCCCCCC" Click="SaveButton_Click">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="#FF353535"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}" >
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF555555"/>
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="Background" Value="#FF707070"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Border>
+
+            <TextBlock x:Name="SavingLabel" Grid.Column="1" Width="75" Margin="12, 0, 0, 0" Foreground="#FFBBBBBB" VerticalAlignment="Center" Visibility="Collapsed" Text="Saving" />
+        </Grid>
     </Grid>
 </Window>
