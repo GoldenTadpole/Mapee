@@ -3,16 +3,12 @@
 A simple, yet powerful Minecraft mapper & filter.<br>Can load worlds from Alpha to the newest release.<br>
 Website: [mapee.net](https://www.mapee.net/home)
 
-[Newest release](https://github.com/GoldenTadpole/Mapee/releases/tag/1.1.0)
+[Newest release](https://github.com/GoldenTadpole/Mapee/releases/tag/1.2.0)
 
 # What's New?
-**Version 1.1.0**
+**Version 1.2.0**
 - Added Alpha support
-- Added new blocks starting from version 1.20 - 26.1
-
-**Current Version (1.1.0)**
-- Supports Minecraft Java worlds from Alpha to latest release
-- Windows-only GUI application
+- Added new blocks in 26.2
 
 # Sample gui images
 
